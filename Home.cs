@@ -40,6 +40,32 @@ namespace Fifa_StatRandomizer
             weight_dropDown.Text = Globals.COMBOBOX_DEFAULT_TEXT;
             position_dropDown.SelectedItem = null;
             position_dropDown.Text = Globals.COMBOBOX_DEFAULT_TEXT;
+            aggression_txtbx.Text = null;
+            attpositioning_txtbx.Text = null;
+            balance_txtbx.Text = null;
+            composure_txtbx.Text = null;
+            jumping_txtbx.Text = null;
+            penalties_txtbx.Text = null;
+            reactions_txtbx.Text = null;
+            stamina_txtbx.Text = null;
+        }
+        private void generateStats() {
+            if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null) {
+                Console.WriteLine("Error");
+                return;
+            }
+            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(height)height_dropDown.SelectedIndex, (weight)weight_dropDown.SelectedIndex,(position)position_dropDown.SelectedIndex);
+            displayStats(attributes);
+        }
+        private void displayStats(Attributes _attributes) {
+            aggression_txtbx.Text = Convert.ToString(_attributes.aggression);
+            attpositioning_txtbx.Text = Convert.ToString(_attributes.att_positioning);
+            balance_txtbx.Text = Convert.ToString(_attributes.balance);
+            composure_txtbx.Text = Convert.ToString(_attributes.composure);
+            jumping_txtbx.Text = Convert.ToString(_attributes.jumping);
+            penalties_txtbx.Text = Convert.ToString(_attributes.penalties);
+            reactions_txtbx.Text = Convert.ToString(_attributes.reactions);
+            stamina_txtbx.Text = Convert.ToString(_attributes.stamina);
         }
         public Home()
         {
@@ -54,6 +80,11 @@ namespace Fifa_StatRandomizer
         private void reset_Btn_Click(object sender, EventArgs e)
         {
             resetComponents();
+        }
+
+        private void generate_Btn_Click(object sender, EventArgs e)
+        {
+            generateStats();
         }
     }
 }
