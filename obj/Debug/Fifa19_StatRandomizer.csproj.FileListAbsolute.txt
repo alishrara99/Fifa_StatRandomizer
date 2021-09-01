@@ -1,0 +1,10 @@
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa19_StatRandomizer.exe.config
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa19_StatRandomizer.exe
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa19_StatRandomizer.pdb
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.Properties.Resources.resources
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.csproj.GenerateResource.cache
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.exe
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa19_StatRandomizer.pdb
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa_StatRandomizer.Home.resources
