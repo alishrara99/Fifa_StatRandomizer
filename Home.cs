@@ -15,22 +15,22 @@ namespace Fifa_StatRandomizer
     public partial class Home : Form
     {
         private void populateComboBoxes() {
-            height_dropDown.Items.Insert((int)height.Short, EnumUtils.GetDescriptionFromEnumValue(height.Short));
-            height_dropDown.Items.Insert((int)height.Average, EnumUtils.GetDescriptionFromEnumValue(height.Average));
-            height_dropDown.Items.Insert((int)height.Tall, EnumUtils.GetDescriptionFromEnumValue(height.Tall));
+            height_dropDown.Items.Insert((int)Globals.height.Short, EnumUtils.GetDescriptionFromEnumValue(Globals.height.Short));
+            height_dropDown.Items.Insert((int)Globals.height.Average, EnumUtils.GetDescriptionFromEnumValue(Globals.height.Average));
+            height_dropDown.Items.Insert((int)Globals.height.Tall, EnumUtils.GetDescriptionFromEnumValue(Globals.height.Tall));
 
-            weight_dropDown.Items.Insert((int)weight.Lean, EnumUtils.GetDescriptionFromEnumValue(weight.Lean));
-            weight_dropDown.Items.Insert((int)weight.Average, EnumUtils.GetDescriptionFromEnumValue(weight.Average));
-            weight_dropDown.Items.Insert((int)weight.Stocky, EnumUtils.GetDescriptionFromEnumValue(weight.Stocky));
+            weight_dropDown.Items.Insert((int)Globals.weight.Lean, EnumUtils.GetDescriptionFromEnumValue(Globals.weight.Lean));
+            weight_dropDown.Items.Insert((int)Globals.weight.Average, EnumUtils.GetDescriptionFromEnumValue(Globals.weight.Average));
+            weight_dropDown.Items.Insert((int)Globals.weight.Stocky, EnumUtils.GetDescriptionFromEnumValue(Globals.weight.Stocky));
 
-            position_dropDown.Items.Insert((int)position.GoalKeeper, EnumUtils.GetDescriptionFromEnumValue(position.GoalKeeper));
-            position_dropDown.Items.Insert((int)position.FullBack, EnumUtils.GetDescriptionFromEnumValue(position.FullBack));
-            position_dropDown.Items.Insert((int)position.CenterBack, EnumUtils.GetDescriptionFromEnumValue(position.CenterBack));
-            position_dropDown.Items.Insert((int)position.DefensiveMid, EnumUtils.GetDescriptionFromEnumValue(position.DefensiveMid));
-            position_dropDown.Items.Insert((int)position.CenterMid, EnumUtils.GetDescriptionFromEnumValue(position.CenterMid));
-            position_dropDown.Items.Insert((int)position.AttackingMid, EnumUtils.GetDescriptionFromEnumValue(position.AttackingMid));
-            position_dropDown.Items.Insert((int)position.Winger, EnumUtils.GetDescriptionFromEnumValue(position.Winger));
-            position_dropDown.Items.Insert((int)position.Striker, EnumUtils.GetDescriptionFromEnumValue(position.Striker));
+            position_dropDown.Items.Insert((int)Globals.position.GoalKeeper, EnumUtils.GetDescriptionFromEnumValue(Globals.position.GoalKeeper));
+            position_dropDown.Items.Insert((int)Globals.position.FullBack, EnumUtils.GetDescriptionFromEnumValue(Globals.position.FullBack));
+            position_dropDown.Items.Insert((int)Globals.position.CenterBack, EnumUtils.GetDescriptionFromEnumValue(Globals.position.CenterBack));
+            position_dropDown.Items.Insert((int)Globals.position.DefensiveMid, EnumUtils.GetDescriptionFromEnumValue(Globals.position.DefensiveMid));
+            position_dropDown.Items.Insert((int)Globals.position.CenterMid, EnumUtils.GetDescriptionFromEnumValue(Globals.position.CenterMid));
+            position_dropDown.Items.Insert((int)Globals.position.AttackingMid, EnumUtils.GetDescriptionFromEnumValue(Globals.position.AttackingMid));
+            position_dropDown.Items.Insert((int)Globals.position.Winger, EnumUtils.GetDescriptionFromEnumValue(Globals.position.Winger));
+            position_dropDown.Items.Insert((int)Globals.position.Striker, EnumUtils.GetDescriptionFromEnumValue(Globals.position.Striker));
         }
         private void resetComponents() {
             potential_numericUpDown.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
@@ -54,7 +54,7 @@ namespace Fifa_StatRandomizer
                 Console.WriteLine("Error");
                 return;
             }
-            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(height)height_dropDown.SelectedIndex, (weight)weight_dropDown.SelectedIndex,(position)position_dropDown.SelectedIndex);
+            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex);
             displayStats(attributes);
         }
         private void displayStats(Attributes _attributes) {
@@ -85,6 +85,16 @@ namespace Fifa_StatRandomizer
         private void generate_Btn_Click(object sender, EventArgs e)
         {
             generateStats();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
