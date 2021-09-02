@@ -30,6 +30,10 @@ namespace Fifa_StatRandomizer
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.weakfoot_drpdwn = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.skillmoves__drpdwn = new System.Windows.Forms.ComboBox();
             this.reset_Btn = new System.Windows.Forms.Button();
             this.generate_Btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,37 +45,43 @@ namespace Fifa_StatRandomizer
             this.label1 = new System.Windows.Forms.Label();
             this.height_dropDown = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.aggression_txtbx = new System.Windows.Forms.TextBox();
-            this.attpositioning_txtbx = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.composure_txtbx = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.balance_txtbx = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.penalties_txtbx = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.jumping_txtbx = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.stamina_txtbx = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.reactions_txtbx = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.penalties_txtbx = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.jumping_txtbx = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.composure_txtbx = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.balance_txtbx = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.attpositioning_txtbx = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.aggression_txtbx = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.weakfoot_txtbx = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.skillmoves_txtbx = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.defWorkRate_txtbx = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.attWorkRate_txtbx = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.weakfoot_drpdwn);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.skillmoves__drpdwn);
             this.groupBox1.Controls.Add(this.reset_Btn);
             this.groupBox1.Controls.Add(this.generate_Btn);
             this.groupBox1.Controls.Add(this.label4);
@@ -88,6 +98,43 @@ namespace Fifa_StatRandomizer
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Data";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 228);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Weak Foot";
+            // 
+            // weakfoot_drpdwn
+            // 
+            this.weakfoot_drpdwn.FormattingEnabled = true;
+            this.weakfoot_drpdwn.Location = new System.Drawing.Point(11, 244);
+            this.weakfoot_drpdwn.Name = "weakfoot_drpdwn";
+            this.weakfoot_drpdwn.Size = new System.Drawing.Size(121, 21);
+            this.weakfoot_drpdwn.TabIndex = 12;
+            this.weakfoot_drpdwn.Text = "--Select--";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 188);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Skill Moves";
+            // 
+            // skillmoves__drpdwn
+            // 
+            this.skillmoves__drpdwn.FormattingEnabled = true;
+            this.skillmoves__drpdwn.Location = new System.Drawing.Point(11, 204);
+            this.skillmoves__drpdwn.Name = "skillmoves__drpdwn";
+            this.skillmoves__drpdwn.Size = new System.Drawing.Size(121, 21);
+            this.skillmoves__drpdwn.TabIndex = 10;
+            this.skillmoves__drpdwn.Text = "--Select--";
+            this.skillmoves__drpdwn.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // reset_Btn
             // 
@@ -187,6 +234,7 @@ namespace Fifa_StatRandomizer
             // 
             // height_dropDown
             // 
+            this.height_dropDown.BackColor = System.Drawing.SystemColors.Window;
             this.height_dropDown.FormattingEnabled = true;
             this.height_dropDown.Location = new System.Drawing.Point(9, 81);
             this.height_dropDown.Name = "height_dropDown";
@@ -219,108 +267,6 @@ namespace Fifa_StatRandomizer
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Attributes";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Aggression";
-            // 
-            // aggression_txtbx
-            // 
-            this.aggression_txtbx.Location = new System.Drawing.Point(10, 41);
-            this.aggression_txtbx.Name = "aggression_txtbx";
-            this.aggression_txtbx.ReadOnly = true;
-            this.aggression_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.aggression_txtbx.TabIndex = 8;
-            // 
-            // attpositioning_txtbx
-            // 
-            this.attpositioning_txtbx.Location = new System.Drawing.Point(10, 81);
-            this.attpositioning_txtbx.Name = "attpositioning_txtbx";
-            this.attpositioning_txtbx.ReadOnly = true;
-            this.attpositioning_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.attpositioning_txtbx.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Attack Positioning";
-            // 
-            // composure_txtbx
-            // 
-            this.composure_txtbx.Location = new System.Drawing.Point(10, 160);
-            this.composure_txtbx.Name = "composure_txtbx";
-            this.composure_txtbx.ReadOnly = true;
-            this.composure_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.composure_txtbx.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Composure";
-            // 
-            // balance_txtbx
-            // 
-            this.balance_txtbx.Location = new System.Drawing.Point(10, 120);
-            this.balance_txtbx.Name = "balance_txtbx";
-            this.balance_txtbx.ReadOnly = true;
-            this.balance_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.balance_txtbx.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Balance";
-            // 
-            // penalties_txtbx
-            // 
-            this.penalties_txtbx.Location = new System.Drawing.Point(10, 239);
-            this.penalties_txtbx.Name = "penalties_txtbx";
-            this.penalties_txtbx.ReadOnly = true;
-            this.penalties_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.penalties_txtbx.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Penalties";
-            // 
-            // jumping_txtbx
-            // 
-            this.jumping_txtbx.Location = new System.Drawing.Point(10, 199);
-            this.jumping_txtbx.Name = "jumping_txtbx";
-            this.jumping_txtbx.ReadOnly = true;
-            this.jumping_txtbx.Size = new System.Drawing.Size(100, 20);
-            this.jumping_txtbx.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 183);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Jumping";
             // 
             // stamina_txtbx
             // 
@@ -356,49 +302,199 @@ namespace Fifa_StatRandomizer
             this.label12.TabIndex = 19;
             this.label12.Text = "Reactions";
             // 
-            // label13
+            // penalties_txtbx
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 188);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 13);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Skill Moves";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.penalties_txtbx.Location = new System.Drawing.Point(10, 239);
+            this.penalties_txtbx.Name = "penalties_txtbx";
+            this.penalties_txtbx.ReadOnly = true;
+            this.penalties_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.penalties_txtbx.TabIndex = 18;
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(11, 204);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "--Select--";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 223);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Penalties";
             // 
-            // label14
+            // jumping_txtbx
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 228);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Weak Foot";
+            this.jumping_txtbx.Location = new System.Drawing.Point(10, 199);
+            this.jumping_txtbx.Name = "jumping_txtbx";
+            this.jumping_txtbx.ReadOnly = true;
+            this.jumping_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.jumping_txtbx.TabIndex = 16;
             // 
-            // comboBox2
+            // label10
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(11, 244);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 12;
-            this.comboBox2.Text = "--Select--";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 183);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Jumping";
+            // 
+            // composure_txtbx
+            // 
+            this.composure_txtbx.Location = new System.Drawing.Point(10, 160);
+            this.composure_txtbx.Name = "composure_txtbx";
+            this.composure_txtbx.ReadOnly = true;
+            this.composure_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.composure_txtbx.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Composure";
+            // 
+            // balance_txtbx
+            // 
+            this.balance_txtbx.Location = new System.Drawing.Point(10, 120);
+            this.balance_txtbx.Name = "balance_txtbx";
+            this.balance_txtbx.ReadOnly = true;
+            this.balance_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.balance_txtbx.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Balance";
+            // 
+            // attpositioning_txtbx
+            // 
+            this.attpositioning_txtbx.Location = new System.Drawing.Point(10, 81);
+            this.attpositioning_txtbx.Name = "attpositioning_txtbx";
+            this.attpositioning_txtbx.ReadOnly = true;
+            this.attpositioning_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.attpositioning_txtbx.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Attack Positioning";
+            // 
+            // aggression_txtbx
+            // 
+            this.aggression_txtbx.Location = new System.Drawing.Point(10, 41);
+            this.aggression_txtbx.Name = "aggression_txtbx";
+            this.aggression_txtbx.ReadOnly = true;
+            this.aggression_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.aggression_txtbx.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Aggression";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.weakfoot_txtbx);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.skillmoves_txtbx);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.defWorkRate_txtbx);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.attWorkRate_txtbx);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Location = new System.Drawing.Point(313, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(118, 426);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Style";
+            // 
+            // weakfoot_txtbx
+            // 
+            this.weakfoot_txtbx.Location = new System.Drawing.Point(10, 160);
+            this.weakfoot_txtbx.Name = "weakfoot_txtbx";
+            this.weakfoot_txtbx.ReadOnly = true;
+            this.weakfoot_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.weakfoot_txtbx.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 144);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(59, 13);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Weak Foot";
+            // 
+            // skillmoves_txtbx
+            // 
+            this.skillmoves_txtbx.Location = new System.Drawing.Point(10, 120);
+            this.skillmoves_txtbx.Name = "skillmoves_txtbx";
+            this.skillmoves_txtbx.ReadOnly = true;
+            this.skillmoves_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.skillmoves_txtbx.TabIndex = 12;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 104);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(58, 13);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "Skill Moves";
+            // 
+            // defWorkRate_txtbx
+            // 
+            this.defWorkRate_txtbx.Location = new System.Drawing.Point(10, 81);
+            this.defWorkRate_txtbx.Name = "defWorkRate_txtbx";
+            this.defWorkRate_txtbx.ReadOnly = true;
+            this.defWorkRate_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.defWorkRate_txtbx.TabIndex = 10;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(7, 65);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(103, 13);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Defensive Workrate";
+            // 
+            // attWorkRate_txtbx
+            // 
+            this.attWorkRate_txtbx.Location = new System.Drawing.Point(10, 41);
+            this.attWorkRate_txtbx.Name = "attWorkRate_txtbx";
+            this.attWorkRate_txtbx.ReadOnly = true;
+            this.attWorkRate_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.attWorkRate_txtbx.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 25);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(102, 13);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "Offensive Workrate";
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Home";
@@ -409,6 +505,8 @@ namespace Fifa_StatRandomizer
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -444,8 +542,17 @@ namespace Fifa_StatRandomizer
         private System.Windows.Forms.TextBox aggression_txtbx;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox skillmoves__drpdwn;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox weakfoot_drpdwn;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox weakfoot_txtbx;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox skillmoves_txtbx;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox defWorkRate_txtbx;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox attWorkRate_txtbx;
+        private System.Windows.Forms.Label label22;
     }
 }

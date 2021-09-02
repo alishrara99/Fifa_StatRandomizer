@@ -31,6 +31,18 @@ namespace Fifa_StatRandomizer
             position_dropDown.Items.Insert((int)Globals.position.AttackingMid, EnumUtils.GetDescriptionFromEnumValue(Globals.position.AttackingMid));
             position_dropDown.Items.Insert((int)Globals.position.Winger, EnumUtils.GetDescriptionFromEnumValue(Globals.position.Winger));
             position_dropDown.Items.Insert((int)Globals.position.Striker, EnumUtils.GetDescriptionFromEnumValue(Globals.position.Striker));
+
+            skillmoves__drpdwn.Items.Insert((int)Globals.skillmoves.One_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.skillmoves.One_Star));
+            skillmoves__drpdwn.Items.Insert((int)Globals.skillmoves.Two_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.skillmoves.Two_Star));
+            skillmoves__drpdwn.Items.Insert((int)Globals.skillmoves.Three_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.skillmoves.Three_Star));
+            skillmoves__drpdwn.Items.Insert((int)Globals.skillmoves.Four_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.skillmoves.Four_Star));
+            skillmoves__drpdwn.Items.Insert((int)Globals.skillmoves.Five_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.skillmoves.Five_Star));
+
+            weakfoot_drpdwn.Items.Insert((int)Globals.weakfoot.One_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.weakfoot.One_Star));
+            weakfoot_drpdwn.Items.Insert((int)Globals.weakfoot.Two_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.weakfoot.Two_Star));
+            weakfoot_drpdwn.Items.Insert((int)Globals.weakfoot.Three_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.weakfoot.Three_Star));
+            weakfoot_drpdwn.Items.Insert((int)Globals.weakfoot.Four_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.weakfoot.Four_Star));
+            weakfoot_drpdwn.Items.Insert((int)Globals.weakfoot.Five_Star, EnumUtils.GetDescriptionFromEnumValue(Globals.weakfoot.Five_Star));
         }
         private void resetComponents() {
             potential_numericUpDown.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
@@ -40,6 +52,10 @@ namespace Fifa_StatRandomizer
             weight_dropDown.Text = Globals.COMBOBOX_DEFAULT_TEXT;
             position_dropDown.SelectedItem = null;
             position_dropDown.Text = Globals.COMBOBOX_DEFAULT_TEXT;
+            skillmoves__drpdwn.SelectedItem = null;
+            skillmoves__drpdwn.Text = Globals.COMBOBOX_DEFAULT_TEXT;
+            weakfoot_drpdwn.SelectedItem = null;
+            weakfoot_drpdwn.Text = Globals.COMBOBOX_DEFAULT_TEXT;
             aggression_txtbx.Text = null;
             attpositioning_txtbx.Text = null;
             balance_txtbx.Text = null;
@@ -48,13 +64,17 @@ namespace Fifa_StatRandomizer
             penalties_txtbx.Text = null;
             reactions_txtbx.Text = null;
             stamina_txtbx.Text = null;
+            attWorkRate_txtbx.Text = null;
+            defWorkRate_txtbx.Text = null;
+            skillmoves_txtbx.Text = null;
+            weakfoot_txtbx.Text = null;
         }
         private void generateStats() {
-            if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null) {
+            if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null || skillmoves__drpdwn.SelectedItem == null || weakfoot_drpdwn.SelectedItem == null) {
                 Console.WriteLine("Error");
                 return;
             }
-            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex);
+            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex,(Globals.skillmoves)skillmoves__drpdwn.SelectedIndex, (Globals.weakfoot)weakfoot_drpdwn.SelectedIndex);
             displayStats(attributes);
         }
         private void displayStats(Attributes _attributes) {
@@ -66,6 +86,10 @@ namespace Fifa_StatRandomizer
             penalties_txtbx.Text = Convert.ToString(_attributes.penalties);
             reactions_txtbx.Text = Convert.ToString(_attributes.reactions);
             stamina_txtbx.Text = Convert.ToString(_attributes.stamina);
+            attWorkRate_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.att_workrate);
+            defWorkRate_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.def_workrate);
+            skillmoves_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.skillmoves);
+            weakfoot_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.weakfoot);
         }
         public Home()
         {
@@ -85,11 +109,6 @@ namespace Fifa_StatRandomizer
         private void generate_Btn_Click(object sender, EventArgs e)
         {
             generateStats();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
