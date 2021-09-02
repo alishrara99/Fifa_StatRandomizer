@@ -75,13 +75,13 @@ namespace Fifa_StatRandomizer.Entities
                     penalties = Globals.Random.Next(40, 80);
                     stamina = _potential - Globals.Random.Next(0, 15);
                     att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.High;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
                     switch (Globals.Random.Next(0, 99))
                     {
                         case int n when n < 30:
-                            def_workrate = Globals.workrate.High;
+                            def_workrate = Globals.workrate.Medium;
                             break;
                         default:
                             break;
@@ -100,14 +100,14 @@ namespace Fifa_StatRandomizer.Entities
                     att_positioning = _potential - Globals.Random.Next(10, 50);
                     penalties = Globals.Random.Next(40, 80);
                     stamina = _potential - Globals.Random.Next(0, 30);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
+                    att_workrate = Globals.workrate.Low;
+                    def_workrate = Globals.workrate.High;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
                     switch (Globals.Random.Next(0, 99))
                     {
                         case int n when n < 30:
-                            def_workrate = Globals.workrate.High;
+                            def_workrate = Globals.workrate.Medium;
                             break;
                         default:
                             break;
@@ -115,7 +115,7 @@ namespace Fifa_StatRandomizer.Entities
                     switch (Globals.Random.Next(0, 99))
                     {
                         case int n when n < 30:
-                            att_workrate = Globals.workrate.Low;
+                            att_workrate = Globals.workrate.Medium;
                             break;
                         default:
                             break;
@@ -127,13 +127,13 @@ namespace Fifa_StatRandomizer.Entities
                     penalties = Globals.Random.Next(50, 80);
                     stamina = _potential - Globals.Random.Next(0, 15);
                     att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.High;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
                     switch (Globals.Random.Next(0, 99))
                     {
                         case int n when n < 30:
-                            def_workrate = Globals.workrate.High;
+                            def_workrate = Globals.workrate.Medium;
                             break;
                         default:
                             break;
@@ -218,7 +218,7 @@ namespace Fifa_StatRandomizer.Entities
                     att_positioning = _potential - Globals.Random.Next(0, 10);
                     penalties = _potential - Globals.Random.Next(0, 15);
                     stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
+                    att_workrate = Globals.workrate.High;
                     def_workrate = Globals.workrate.Medium;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
@@ -236,7 +236,7 @@ namespace Fifa_StatRandomizer.Entities
                     switch (Globals.Random.Next(0, 99))
                     {
                         case int n when n < 30:
-                            att_workrate = Globals.workrate.High;
+                            att_workrate = Globals.workrate.Medium;
                             break;
                         default:
                             break;
