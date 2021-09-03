@@ -70,6 +70,8 @@ namespace Fifa_StatRandomizer
             this.label21 = new System.Windows.Forms.Label();
             this.attWorkRate_txtbx = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.traits_txtbx = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -406,6 +408,8 @@ namespace Fifa_StatRandomizer
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.traits_txtbx);
+            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.weakfoot_txtbx);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.skillmoves_txtbx);
@@ -416,7 +420,7 @@ namespace Fifa_StatRandomizer
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(313, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(118, 426);
+            this.groupBox3.Size = new System.Drawing.Size(137, 426);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Style";
@@ -426,7 +430,7 @@ namespace Fifa_StatRandomizer
             this.weakfoot_txtbx.Location = new System.Drawing.Point(10, 160);
             this.weakfoot_txtbx.Name = "weakfoot_txtbx";
             this.weakfoot_txtbx.ReadOnly = true;
-            this.weakfoot_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.weakfoot_txtbx.Size = new System.Drawing.Size(121, 20);
             this.weakfoot_txtbx.TabIndex = 14;
             // 
             // label19
@@ -443,7 +447,7 @@ namespace Fifa_StatRandomizer
             this.skillmoves_txtbx.Location = new System.Drawing.Point(10, 120);
             this.skillmoves_txtbx.Name = "skillmoves_txtbx";
             this.skillmoves_txtbx.ReadOnly = true;
-            this.skillmoves_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.skillmoves_txtbx.Size = new System.Drawing.Size(121, 20);
             this.skillmoves_txtbx.TabIndex = 12;
             // 
             // label20
@@ -460,7 +464,7 @@ namespace Fifa_StatRandomizer
             this.defWorkRate_txtbx.Location = new System.Drawing.Point(10, 81);
             this.defWorkRate_txtbx.Name = "defWorkRate_txtbx";
             this.defWorkRate_txtbx.ReadOnly = true;
-            this.defWorkRate_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.defWorkRate_txtbx.Size = new System.Drawing.Size(121, 20);
             this.defWorkRate_txtbx.TabIndex = 10;
             // 
             // label21
@@ -477,7 +481,7 @@ namespace Fifa_StatRandomizer
             this.attWorkRate_txtbx.Location = new System.Drawing.Point(10, 41);
             this.attWorkRate_txtbx.Name = "attWorkRate_txtbx";
             this.attWorkRate_txtbx.ReadOnly = true;
-            this.attWorkRate_txtbx.Size = new System.Drawing.Size(100, 20);
+            this.attWorkRate_txtbx.Size = new System.Drawing.Size(121, 20);
             this.attWorkRate_txtbx.TabIndex = 8;
             // 
             // label22
@@ -488,6 +492,24 @@ namespace Fifa_StatRandomizer
             this.label22.Size = new System.Drawing.Size(102, 13);
             this.label22.TabIndex = 1;
             this.label22.Text = "Offensive Workrate";
+            // 
+            // traits_txtbx
+            // 
+            this.traits_txtbx.Location = new System.Drawing.Point(10, 199);
+            this.traits_txtbx.Multiline = true;
+            this.traits_txtbx.Name = "traits_txtbx";
+            this.traits_txtbx.ReadOnly = true;
+            this.traits_txtbx.Size = new System.Drawing.Size(121, 218);
+            this.traits_txtbx.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 183);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 13);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Traits";
             // 
             // Home
             // 
@@ -554,5 +576,7 @@ namespace Fifa_StatRandomizer
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox attWorkRate_txtbx;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox traits_txtbx;
+        private System.Windows.Forms.Label label15;
     }
 }

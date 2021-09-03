@@ -9,6 +9,48 @@ namespace Fifa_StatRandomizer.Utilities
 {
     public static class Globals
     {
+        public enum traits {
+            [Description("Cautions With Crosses")]
+            Cautions_With_Crosses,
+            [Description("Comes For Crosses")]
+            Comes_For_Crosses,
+            [Description("Saves With Feet")]
+            Saves_With_Feet,
+            [Description("GK Long Throw")]
+            GK_Long_Throw,
+            [Description("GK Flat Kick")]
+            GK_Flat_Kick,
+            [Description("Rushes Out of Goal")]
+            Rushes_Out_Of_Goal,
+            [Description("Long Throw-In")]
+            Long_Throw_In,
+            [Description("Giant Throw-In")]
+            Giant_Throw_In,
+            [Description("Injury Prone")]
+            Injury_Prone,
+            [Description("Solid Player")]
+            Solid_Player,
+            [Description("Leadership")]
+            Leadership,
+            [Description("Finesse Shot")]
+            Finesse_Shot,
+            [Description("Outside Foot Shot")]
+            Outside_Foot_Shot,
+            [Description("Avoids Using Weakfoot")]
+            Avoids_Using_Weakfoot,
+            [Description("Takes Finesse Freekicks")]
+            Takes_Finesse_Freekicks,
+            [Description("Takes Power Freekicks")]
+            Takes_Power_Freekicks,
+            [Description("Early Crosser")]
+            Early_Crosser,
+            [Description("Flair")]
+            Flair,
+            [Description("Tornado")]
+            Tornado,
+            [Description("Power Header")]
+            Power_Header
+        }
         public enum workrate
         {
             [Description("Low")]

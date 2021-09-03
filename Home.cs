@@ -90,6 +90,16 @@ namespace Fifa_StatRandomizer
             defWorkRate_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.def_workrate);
             skillmoves_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.skillmoves);
             weakfoot_txtbx.Text = EnumUtils.GetDescriptionFromEnumValue(_attributes.weakfoot);
+            traits_txtbx.Text = generateTraits(_attributes.traits);
+        }
+        private string generateTraits(List<Globals.traits> traits)
+        {
+            string text = "";
+            foreach (Globals.traits element in traits)
+            { 
+            text = text + EnumUtils.GetDescriptionFromEnumValue(element)+ "\r\n" ;
+            }
+            return text;
         }
         public Home()
         {

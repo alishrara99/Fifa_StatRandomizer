@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Fifa_StatRandomizer.Utilities;
 
 namespace Fifa_StatRandomizer.Entities
@@ -22,6 +23,7 @@ namespace Fifa_StatRandomizer.Entities
         public Globals.workrate def_workrate { get; set; }
         public Globals.weakfoot weakfoot { get; set; }
         public Globals.skillmoves skillmoves { get; set; }
+        public List<Globals.traits> traits = new List<Globals.traits>();
 
 
         public Attributes(int _potential, Globals.height _height , Globals.weight _weight , Globals.position _position , Globals.skillmoves _skillmoves , Globals.weakfoot _weakfoot)
@@ -30,14 +32,38 @@ namespace Fifa_StatRandomizer.Entities
                 case Globals.height.Short:
                     balance = _potential - Globals.Random.Next(0, 10);
                     jumping = _potential - Globals.Random.Next(10, 40);
+                    switch (Globals.Random.Next(0, 99))
+                    {
+                        case int n when n < 10:
+                            traits.Add(Globals.traits.Power_Header);
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case Globals.height.Average:
                     balance = _potential - Globals.Random.Next(0, 20);
                     jumping = _potential - Globals.Random.Next(0, 20);
+                    switch (Globals.Random.Next(0, 99))
+                    {
+                        case int n when n < 20:
+                            traits.Add(Globals.traits.Power_Header);
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case Globals.height.Tall:
                     balance = _potential - Globals.Random.Next(10, 30);
                     jumping = _potential - Globals.Random.Next(0,10);
+                    switch (Globals.Random.Next(0, 99))
+                    {
+                        case int n when n < 30:
+                            traits.Add(Globals.traits.Power_Header);
+                            break;
+                        default:
+                            break;
+                    }
                     break;
             }
      
@@ -67,7 +93,30 @@ namespace Fifa_StatRandomizer.Entities
                             att_workrate = Globals.workrate.Medium;
                             break;
                     }
-
+                    if (Globals.Random.Next(0, 99) < 30)
+                    {
+                         traits.Add(Globals.traits.Cautions_With_Crosses);
+                    }
+                    if (Globals.Random.Next(0, 99) < 30 && !traits.Contains(Globals.traits.Cautions_With_Crosses))
+                    {
+                        traits.Add(Globals.traits.Comes_For_Crosses);
+                    }
+                    if (Globals.Random.Next(0, 99) < 30)
+                    {
+                        traits.Add(Globals.traits.Saves_With_Feet);
+                    }
+                    if (Globals.Random.Next(0, 99) < 30)
+                    {
+                        traits.Add(Globals.traits.GK_Long_Throw);
+                    }
+                    if (Globals.Random.Next(0, 99) < 30)
+                    {
+                        traits.Add(Globals.traits.GK_Flat_Kick);
+                    }
+                    if (Globals.Random.Next(0, 99) < 30)
+                    {
+                        traits.Add(Globals.traits.Rushes_Out_Of_Goal);
+                    }
                     break;
                 case Globals.position.FullBack:
                     aggression = _potential - Globals.Random.Next(0, 20);
@@ -331,4 +380,5 @@ namespace Fifa_StatRandomizer.Entities
         }
 
     }
+
 }
