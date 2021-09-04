@@ -28,71 +28,60 @@ namespace Fifa_StatRandomizer.Entities
 
         public Attributes(int _potential, Globals.height _height , Globals.weight _weight , Globals.position _position , Globals.skillmoves _skillmoves , Globals.weakfoot _weakfoot)
         {
-            switch (_height) {
-                case Globals.height.Short:
-                    balance = _potential - Globals.Random.Next(0, 10);
-                    jumping = _potential - Globals.Random.Next(10, 40);
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 10:
-                            traits.Add(Globals.traits.Power_Header);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.height.Average:
-                    balance = _potential - Globals.Random.Next(0, 20);
-                    jumping = _potential - Globals.Random.Next(0, 20);
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 20:
-                            traits.Add(Globals.traits.Power_Header);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.height.Tall:
-                    balance = _potential - Globals.Random.Next(10, 30);
-                    jumping = _potential - Globals.Random.Next(0,10);
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            traits.Add(Globals.traits.Power_Header);
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
+            if (_position != Globals.position.GoalKeeper)
+            {
+                switch (_height)
+                {
+                    case Globals.height.Short:
+                        balance = _potential - Globals.Random.Next(0, 10);
+                        jumping = _potential - Globals.Random.Next(10, 40); 
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 10) };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.height.Average:
+                        balance = _potential - Globals.Random.Next(0, 20);
+                        jumping = _potential - Globals.Random.Next(0, 20);
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 20) };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.height.Tall:
+                        balance = _potential - Globals.Random.Next(10, 30);
+                        jumping = _potential - Globals.Random.Next(0, 10);
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 30) };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+
+                }
             }
-     
             switch (_position)
             {
                 case Globals.position.GoalKeeper:
                     aggression = _potential - Globals.Random.Next(0, 40);
                     att_positioning = Globals.Random.Next(20, 30);
                     penalties = Globals.Random.Next(20, 80);
-                    stamina = Globals.Random.Next(65, _potential);
+                    stamina = Globals.Random.Next(40, 60);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.Medium;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99)) {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.High;
-                            break;
-                        default:
-                            def_workrate = Globals.workrate.Medium;
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.Low;
-                            break;
-                        default:
-                            att_workrate = Globals.workrate.Medium;
-                            break;
-                    }
                     if (Globals.Random.Next(0, 99) < 30)
                     {
                          traits.Add(Globals.traits.Cautions_With_Crosses);
@@ -111,7 +100,7 @@ namespace Fifa_StatRandomizer.Entities
                     }
                     if (Globals.Random.Next(0, 99) < 30)
                     {
-                        traits.Add(Globals.traits.GK_Flat_Kick);
+                        traits.Add(Globals.traits.Puncher);
                     }
                     if (Globals.Random.Next(0, 99) < 30)
                     {

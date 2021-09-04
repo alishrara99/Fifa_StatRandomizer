@@ -7,8 +7,40 @@ using System.Threading.Tasks;
 
 namespace Fifa_StatRandomizer.Utilities
 {
+    public class ProbabilityObj {
+        public object obj;
+        public int objChance;
+
+        public ProbabilityObj(object obj, int objChance) { 
+        this.obj = obj;
+        this.objChance = objChance;
+        }
+    }
     public static class Globals
     {
+        public static object testChances (List<ProbabilityObj> chancesList) {
+            int totalChance = 0;
+            List<object> itemPool = new List<object>();
+            foreach (var item in chancesList)  {
+                totalChance += item.objChance;
+            }
+            if (totalChance > 100)
+            {
+                return null;
+            }
+            foreach (var item in chancesList)
+            {
+                for (int i = 0; i < item.objChance; i++) {
+                    itemPool.Add(item.obj);
+                }
+            }
+            for (int i = 0; i < 100-totalChance; i++)
+            {
+                itemPool.Add(null);
+            }
+            itemPool.Shuffle();
+            return itemPool[Globals.Random.Next(0,99)];
+        }
         public enum traits {
             [Description("Cautions With Crosses")]
             Cautions_With_Crosses,
@@ -18,10 +50,14 @@ namespace Fifa_StatRandomizer.Utilities
             Saves_With_Feet,
             [Description("GK Long Throw")]
             GK_Long_Throw,
-            [Description("GK Flat Kick")]
-            GK_Flat_Kick,
+            [Description("Puncher")]
+            Puncher,
             [Description("Rushes Out of Goal")]
             Rushes_Out_Of_Goal,
+            [Description("GK 1 on 1")]
+            GK_1on1,
+            [Description("Early Crosser")]
+            Early_Crosser,
             [Description("Long Throw-In")]
             Long_Throw_In,
             [Description("Giant Throw-In")]
@@ -42,12 +78,8 @@ namespace Fifa_StatRandomizer.Utilities
             Takes_Finesse_Freekicks,
             [Description("Takes Power Freekicks")]
             Takes_Power_Freekicks,
-            [Description("Early Crosser")]
-            Early_Crosser,
             [Description("Flair")]
             Flair,
-            [Description("Tornado")]
-            Tornado,
             [Description("Power Header")]
             Power_Header
         }

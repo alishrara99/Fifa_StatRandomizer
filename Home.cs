@@ -68,6 +68,7 @@ namespace Fifa_StatRandomizer
             defWorkRate_txtbx.Text = null;
             skillmoves_txtbx.Text = null;
             weakfoot_txtbx.Text = null;
+            traits_txtbx.Text = null;
         }
         private void generateStats() {
             if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null || skillmoves__drpdwn.SelectedItem == null || weakfoot_drpdwn.SelectedItem == null) {
@@ -109,6 +110,7 @@ namespace Fifa_StatRandomizer
         private void Home_Load(object sender, EventArgs e)
         {
             populateComboBoxes();
+            potential_numericUpDown.Focus();
         }
 
         private void reset_Btn_Click(object sender, EventArgs e)

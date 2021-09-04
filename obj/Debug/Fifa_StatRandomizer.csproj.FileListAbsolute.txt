@@ -8,3 +8,7 @@ C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa_StatRandomizer.e
 C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa_StatRandomizer.pdb
 C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa_StatRandomizer.exe
 C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa_StatRandomizer.pdb
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa_StatRandomizer.exe.manifest
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\bin\Debug\Fifa_StatRandomizer.application
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa_StatRandomizer.exe.manifest
+C:\Users\Acer\source\repos\Fifa19_StatRandomizer\obj\Debug\Fifa_StatRandomizer.application
