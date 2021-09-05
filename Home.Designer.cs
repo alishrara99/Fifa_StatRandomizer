@@ -72,14 +72,51 @@ namespace Fifa_StatRandomizer
             this.label21 = new System.Windows.Forms.Label();
             this.attWorkRate_txtbx = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.fkacc_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.curve_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.shotpower_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.shotpower_numupdwn);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.curve_numupdwn);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.fkacc_numupdwn);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.weakfoot_drpdwn);
             this.groupBox1.Controls.Add(this.label13);
@@ -104,7 +141,7 @@ namespace Fifa_StatRandomizer
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 228);
+            this.label14.Location = new System.Drawing.Point(9, 348);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 13;
@@ -113,7 +150,7 @@ namespace Fifa_StatRandomizer
             // weakfoot_drpdwn
             // 
             this.weakfoot_drpdwn.FormattingEnabled = true;
-            this.weakfoot_drpdwn.Location = new System.Drawing.Point(11, 244);
+            this.weakfoot_drpdwn.Location = new System.Drawing.Point(11, 364);
             this.weakfoot_drpdwn.Name = "weakfoot_drpdwn";
             this.weakfoot_drpdwn.Size = new System.Drawing.Size(121, 21);
             this.weakfoot_drpdwn.TabIndex = 12;
@@ -122,7 +159,7 @@ namespace Fifa_StatRandomizer
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 188);
+            this.label13.Location = new System.Drawing.Point(9, 308);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 11;
@@ -131,7 +168,7 @@ namespace Fifa_StatRandomizer
             // skillmoves__drpdwn
             // 
             this.skillmoves__drpdwn.FormattingEnabled = true;
-            this.skillmoves__drpdwn.Location = new System.Drawing.Point(11, 204);
+            this.skillmoves__drpdwn.Location = new System.Drawing.Point(11, 324);
             this.skillmoves__drpdwn.Name = "skillmoves__drpdwn";
             this.skillmoves__drpdwn.Size = new System.Drawing.Size(121, 21);
             this.skillmoves__drpdwn.TabIndex = 10;
@@ -140,7 +177,7 @@ namespace Fifa_StatRandomizer
             // 
             // reset_Btn
             // 
-            this.reset_Btn.Location = new System.Drawing.Point(9, 394);
+            this.reset_Btn.Location = new System.Drawing.Point(9, 397);
             this.reset_Btn.Name = "reset_Btn";
             this.reset_Btn.Size = new System.Drawing.Size(75, 23);
             this.reset_Btn.TabIndex = 9;
@@ -150,7 +187,7 @@ namespace Fifa_StatRandomizer
             // 
             // generate_Btn
             // 
-            this.generate_Btn.Location = new System.Drawing.Point(89, 394);
+            this.generate_Btn.Location = new System.Drawing.Point(89, 397);
             this.generate_Btn.Name = "generate_Btn";
             this.generate_Btn.Size = new System.Drawing.Size(75, 23);
             this.generate_Btn.TabIndex = 8;
@@ -161,7 +198,7 @@ namespace Fifa_StatRandomizer
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 148);
+            this.label4.Location = new System.Drawing.Point(9, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 7;
@@ -170,7 +207,7 @@ namespace Fifa_StatRandomizer
             // position_dropDown
             // 
             this.position_dropDown.FormattingEnabled = true;
-            this.position_dropDown.Location = new System.Drawing.Point(11, 164);
+            this.position_dropDown.Location = new System.Drawing.Point(11, 284);
             this.position_dropDown.Name = "position_dropDown";
             this.position_dropDown.Size = new System.Drawing.Size(121, 21);
             this.position_dropDown.TabIndex = 6;
@@ -179,7 +216,7 @@ namespace Fifa_StatRandomizer
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 106);
+            this.label3.Location = new System.Drawing.Point(8, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 5;
@@ -188,7 +225,7 @@ namespace Fifa_StatRandomizer
             // weight_dropDown
             // 
             this.weight_dropDown.FormattingEnabled = true;
-            this.weight_dropDown.Location = new System.Drawing.Point(10, 122);
+            this.weight_dropDown.Location = new System.Drawing.Point(10, 242);
             this.weight_dropDown.Name = "weight_dropDown";
             this.weight_dropDown.Size = new System.Drawing.Size(121, 21);
             this.weight_dropDown.TabIndex = 4;
@@ -197,7 +234,7 @@ namespace Fifa_StatRandomizer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 65);
+            this.label2.Location = new System.Drawing.Point(7, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
@@ -205,14 +242,14 @@ namespace Fifa_StatRandomizer
             // 
             // potential_numericUpDown
             // 
-            this.potential_numericUpDown.Location = new System.Drawing.Point(10, 42);
+            this.potential_numericUpDown.Location = new System.Drawing.Point(9, 42);
             this.potential_numericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
             this.potential_numericUpDown.Minimum = new decimal(new int[] {
-            60,
+            50,
             0,
             0,
             0});
@@ -228,7 +265,7 @@ namespace Fifa_StatRandomizer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 25);
+            this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 1;
@@ -238,7 +275,7 @@ namespace Fifa_StatRandomizer
             // 
             this.height_dropDown.BackColor = System.Drawing.SystemColors.Window;
             this.height_dropDown.FormattingEnabled = true;
-            this.height_dropDown.Location = new System.Drawing.Point(9, 81);
+            this.height_dropDown.Location = new System.Drawing.Point(9, 201);
             this.height_dropDown.Name = "height_dropDown";
             this.height_dropDown.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.height_dropDown.Size = new System.Drawing.Size(121, 21);
@@ -420,7 +457,7 @@ namespace Fifa_StatRandomizer
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(313, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(137, 426);
+            this.groupBox3.Size = new System.Drawing.Size(162, 426);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Style";
@@ -431,7 +468,7 @@ namespace Fifa_StatRandomizer
             this.traits_txtbx.Multiline = true;
             this.traits_txtbx.Name = "traits_txtbx";
             this.traits_txtbx.ReadOnly = true;
-            this.traits_txtbx.Size = new System.Drawing.Size(121, 218);
+            this.traits_txtbx.Size = new System.Drawing.Size(146, 216);
             this.traits_txtbx.TabIndex = 16;
             // 
             // label15
@@ -448,7 +485,7 @@ namespace Fifa_StatRandomizer
             this.weakfoot_txtbx.Location = new System.Drawing.Point(10, 160);
             this.weakfoot_txtbx.Name = "weakfoot_txtbx";
             this.weakfoot_txtbx.ReadOnly = true;
-            this.weakfoot_txtbx.Size = new System.Drawing.Size(121, 20);
+            this.weakfoot_txtbx.Size = new System.Drawing.Size(146, 20);
             this.weakfoot_txtbx.TabIndex = 14;
             // 
             // label19
@@ -465,7 +502,7 @@ namespace Fifa_StatRandomizer
             this.skillmoves_txtbx.Location = new System.Drawing.Point(10, 120);
             this.skillmoves_txtbx.Name = "skillmoves_txtbx";
             this.skillmoves_txtbx.ReadOnly = true;
-            this.skillmoves_txtbx.Size = new System.Drawing.Size(121, 20);
+            this.skillmoves_txtbx.Size = new System.Drawing.Size(146, 20);
             this.skillmoves_txtbx.TabIndex = 12;
             // 
             // label20
@@ -482,7 +519,7 @@ namespace Fifa_StatRandomizer
             this.defWorkRate_txtbx.Location = new System.Drawing.Point(10, 81);
             this.defWorkRate_txtbx.Name = "defWorkRate_txtbx";
             this.defWorkRate_txtbx.ReadOnly = true;
-            this.defWorkRate_txtbx.Size = new System.Drawing.Size(121, 20);
+            this.defWorkRate_txtbx.Size = new System.Drawing.Size(146, 20);
             this.defWorkRate_txtbx.TabIndex = 10;
             // 
             // label21
@@ -499,7 +536,7 @@ namespace Fifa_StatRandomizer
             this.attWorkRate_txtbx.Location = new System.Drawing.Point(10, 41);
             this.attWorkRate_txtbx.Name = "attWorkRate_txtbx";
             this.attWorkRate_txtbx.ReadOnly = true;
-            this.attWorkRate_txtbx.Size = new System.Drawing.Size(121, 20);
+            this.attWorkRate_txtbx.Size = new System.Drawing.Size(146, 20);
             this.attWorkRate_txtbx.TabIndex = 8;
             // 
             // label22
@@ -511,11 +548,311 @@ namespace Fifa_StatRandomizer
             this.label22.TabIndex = 1;
             this.label22.Text = "Offensive Workrate";
             // 
+            // fkacc_numupdwn
+            // 
+            this.fkacc_numupdwn.Location = new System.Drawing.Point(9, 82);
+            this.fkacc_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.fkacc_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.fkacc_numupdwn.Name = "fkacc_numupdwn";
+            this.fkacc_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.fkacc_numupdwn.TabIndex = 15;
+            this.fkacc_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Fk. Accuracy";
+            // 
+            // curve_numupdwn
+            // 
+            this.curve_numupdwn.Location = new System.Drawing.Point(10, 122);
+            this.curve_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.curve_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.curve_numupdwn.Name = "curve_numupdwn";
+            this.curve_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.curve_numupdwn.TabIndex = 17;
+            this.curve_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 105);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(36, 13);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Curve";
+            // 
+            // shotpower_numupdwn
+            // 
+            this.shotpower_numupdwn.Location = new System.Drawing.Point(10, 162);
+            this.shotpower_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.shotpower_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shotpower_numupdwn.Name = "shotpower_numupdwn";
+            this.shotpower_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.shotpower_numupdwn.TabIndex = 19;
+            this.shotpower_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 145);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Shot Power";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.label30);
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.label31);
+            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.label29);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.label28);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.label24);
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.label26);
+            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Location = new System.Drawing.Point(481, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(137, 426);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Misc";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 223);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(96, 13);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "Tattoo - Right Arm";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(9, 199);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(121, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 183);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 13);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Boots";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(9, 160);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(121, 20);
+            this.textBox4.TabIndex = 10;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 144);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(79, 13);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "Penalty Stance";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(9, 120);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(121, 20);
+            this.textBox5.TabIndex = 8;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 104);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(82, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Freekick Stance";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 238);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(121, 21);
+            this.textBox1.TabIndex = 17;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(9, 80);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.TabIndex = 21;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(99, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Sprinting Animation";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(9, 40);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(121, 20);
+            this.textBox6.TabIndex = 19;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 24);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(96, 13);
+            this.label28.TabIndex = 18;
+            this.label28.Text = "Running Animation";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(9, 277);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(121, 21);
+            this.textBox7.TabIndex = 23;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 262);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 13);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Tattoo - Left Arm";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(9, 355);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(121, 21);
+            this.textBox8.TabIndex = 27;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 340);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(94, 13);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "Tattoo - Left Neck";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(9, 316);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(121, 21);
+            this.textBox9.TabIndex = 25;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 301);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(100, 13);
+            this.label31.TabIndex = 24;
+            this.label31.Text = "Tattoo - Right Neck";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(9, 394);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(121, 21);
+            this.textBox10.TabIndex = 29;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 379);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(71, 13);
+            this.label32.TabIndex = 28;
+            this.label32.Text = "Tattoo - Back";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -529,6 +866,11 @@ namespace Fifa_StatRandomizer
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -578,5 +920,32 @@ namespace Fifa_StatRandomizer
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox traits_txtbx;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown shotpower_numupdwn;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown curve_numupdwn;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown fkacc_numupdwn;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label29;
     }
 }

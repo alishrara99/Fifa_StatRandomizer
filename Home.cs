@@ -46,6 +46,9 @@ namespace Fifa_StatRandomizer
         }
         private void resetComponents() {
             potential_numericUpDown.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
+            fkacc_numupdwn.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
+            curve_numupdwn.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
+            shotpower_numupdwn.Value = Globals.NUMERICUPDOWN_DEFAULT_VALUE;
             height_dropDown.SelectedItem = null;
             height_dropDown.Text = Globals.COMBOBOX_DEFAULT_TEXT;
             weight_dropDown.SelectedItem = null;
@@ -75,7 +78,7 @@ namespace Fifa_StatRandomizer
                 Console.WriteLine("Error");
                 return;
             }
-            Attributes attributes= new Attributes((int)potential_numericUpDown.Value,(Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex,(Globals.skillmoves)skillmoves__drpdwn.SelectedIndex, (Globals.weakfoot)weakfoot_drpdwn.SelectedIndex);
+            Attributes attributes= new Attributes((int)potential_numericUpDown.Value, (int)fkacc_numupdwn.Value, (int)curve_numupdwn.Value, (int)shotpower_numupdwn.Value, (Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex,(Globals.skillmoves)skillmoves__drpdwn.SelectedIndex, (Globals.weakfoot)weakfoot_drpdwn.SelectedIndex);
             displayStats(attributes);
         }
         private void displayStats(Attributes _attributes) {
@@ -124,6 +127,16 @@ namespace Fifa_StatRandomizer
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

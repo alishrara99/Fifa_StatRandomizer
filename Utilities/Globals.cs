@@ -100,6 +100,44 @@ namespace Fifa_StatRandomizer.Utilities
             [Description("Blames Teammates")]
             Blames_Teammates
         }
+        public enum freeKickStanceID
+        {
+        Default =0,
+        FarfromBall=1,
+        NinetyDegreesfromBall=2,
+        HandsHighonHips=3,
+        HandsLowonHips=4,
+        StraightRun = 5,
+        SlowBuildup = 6,
+        DeepBreath = 7,
+        Technique = 8,
+        Samba = 9,
+        WideStance = 10
+        }
+        public enum penaltyKickStanceID
+        {
+            Default = 0,
+            StandTall = 3,
+            DeepBreath = 4,
+            HandsonHips = 5,
+            WideStance = 6,
+            MediumStance = 7,
+            StaggeredStance = 8,
+            WideStanceArmsDown = 9,
+            Relaxed = 10
+        }
+        public enum tattoo_rightArm
+        {
+            _0 = 0,
+            _1 = 1,
+            DeepBreath = 4,
+            HandsonHips = 5,
+            WideStance = 6,
+            MediumStance = 7,
+            StaggeredStance = 8,
+            WideStanceArmsDown = 9,
+            Relaxed = 10
+        }
         public enum workrate
         {
             [Description("Low")]
@@ -173,15 +211,8 @@ namespace Fifa_StatRandomizer.Utilities
             Striker = 7
         }
         public static Random Random = new Random();
-        public static int NUMERICUPDOWN_DEFAULT_VALUE = 60;
+        public static int NUMERICUPDOWN_DEFAULT_VALUE = 50;
         public static string COMBOBOX_DEFAULT_TEXT = "--Select--";
-        public static int TALENTED_MIN = -5;
-        public static int PRIMARY_MIN = 0;
-        public static int SECONDARY_MIN = 10;
-        public static int TERETIARY_MIN = 20;
-        public static int PRIMARY_MAX = 10;
-        public static int SECONDARY_MAX = 30;
-        public static int TERETIARY_MAX = 40;
 
         //unused
         //public enum potential_fulfillment

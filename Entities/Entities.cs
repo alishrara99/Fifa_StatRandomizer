@@ -26,7 +26,7 @@ namespace Fifa_StatRandomizer.Entities
         public List<Globals.traits> traits = new List<Globals.traits>();
 
 
-        public Attributes(int _potential, Globals.height _height, Globals.weight _weight, Globals.position _position, Globals.skillmoves _skillmoves, Globals.weakfoot _weakfoot)
+        public Attributes(int _potential, int _fkacc, int _curve, int _shotpower, Globals.height _height, Globals.weight _weight, Globals.position _position, Globals.skillmoves _skillmoves, Globals.weakfoot _weakfoot)
         {
             ///////////////////
             switch (_position)
@@ -427,8 +427,8 @@ namespace Fifa_StatRandomizer.Entities
                         {
                             {
                                 List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 20),
-                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 20)
+                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 15),
+                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 15)
                         };
                                 object result = Globals.testChances(list);
                                 if (result != null)
@@ -443,8 +443,8 @@ namespace Fifa_StatRandomizer.Entities
                         {
                             {
                                 List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 20),
-                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 20)
+                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 15),
+                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 15)
                         };
                                 object result = Globals.testChances(list);
                                 if (result != null)
@@ -457,8 +457,8 @@ namespace Fifa_StatRandomizer.Entities
                     case Globals.position.AttackingMid:
                         {
                             List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 25),
-                        new ProbabilityObj(Globals.traits.Backs_Into_Player, 25)
+                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 20),
+                        new ProbabilityObj(Globals.traits.Backs_Into_Player, 20)
                         };
                             object result = Globals.testChances(list);
                             if (result != null)
@@ -470,7 +470,7 @@ namespace Fifa_StatRandomizer.Entities
                     case Globals.position.Winger:
                         {
                             List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 40),
+                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 35),
                         new ProbabilityObj(Globals.traits.Backs_Into_Player, 20),
                         new ProbabilityObj(Globals.traits.Target_Forward, 15)
                         };
@@ -514,6 +514,120 @@ namespace Fifa_StatRandomizer.Entities
                     default:
                         break;
 
+                }
+                // set play specialist
+                switch (_position) {
+                    case Globals.position.FullBack:
+                    case Globals.position.CenterBack:
+                        if (_fkacc >= 60) {
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Set_Play_Specialist, 20)
+                                };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                            if (_curve <= _shotpower || _shotpower >= 60)
+                            {
+                                {
+                                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Takes_Power_Freekicks, 30),
+                            new ProbabilityObj(Globals.traits.Takes_Finesse_Freekicks, 15)
+                                };
+                                    object result = Globals.testChances(list);
+                                    if (result != null)
+                                    {
+                                        traits.Add((Globals.traits)result);
+                                    }
+                                }
+                            }
+                            else if (_curve > _shotpower || _curve >= 60){
+                                {
+                                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Takes_Finesse_Freekicks, 30),
+                            new ProbabilityObj(Globals.traits.Takes_Power_Freekicks, 15)
+                                };
+                                    object result = Globals.testChances(list);
+                                    if (result != null)
+                                    {
+                                        traits.Add((Globals.traits)result);
+                                        if ((Globals.traits)result == Globals.traits.Takes_Finesse_Freekicks)
+                                        {
+                                            List<ProbabilityObj> list2 = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Finesse_Shot, 30)
+                                };
+                                            object result2 = Globals.testChances(list2);
+                                            if (result2 != null)
+                                            {
+                                                traits.Add((Globals.traits)result2);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        break;
+                    case Globals.position.DefensiveMid:
+                    case Globals.position.CenterMid:
+                    case Globals.position.AttackingMid:
+                    case Globals.position.Winger:
+                    case Globals.position.Striker:
+                        if (_fkacc >= 60)
+                        {
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Set_Play_Specialist, 35)
+                                };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                            if (_curve <= _shotpower || _shotpower >= 60)
+                            {
+                                {
+                                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Takes_Power_Freekicks, 35),
+                            new ProbabilityObj(Globals.traits.Takes_Finesse_Freekicks, 15)
+                                };
+                                    object result = Globals.testChances(list);
+                                    if (result != null)
+                                    {
+                                        traits.Add((Globals.traits)result);
+                                    }
+                                }
+                            }
+                            else if (_curve > _shotpower || _curve >= 60)
+                            {
+                                {
+                                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Takes_Finesse_Freekicks, 35),
+                            new ProbabilityObj(Globals.traits.Takes_Power_Freekicks, 15)
+                                };
+                                    object result = Globals.testChances(list);
+                                    if (result != null)
+                                    {
+                                        traits.Add((Globals.traits)result);
+                                        if ((Globals.traits)result == Globals.traits.Takes_Finesse_Freekicks)
+                                        {
+                                            List<ProbabilityObj> list2 = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Finesse_Shot, 30)
+                                };
+                                            object result2 = Globals.testChances(list2);
+                                            if (result2 != null)
+                                            {
+                                                traits.Add((Globals.traits)result2);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        break;
                 }
 
                 if ((int)skillmoves < 4)
@@ -575,6 +689,77 @@ namespace Fifa_StatRandomizer.Entities
                                 }
                             }
                             break;
+                    }
+                }
+
+                //outside foot
+                if ((int)skillmoves > 2) {
+                    switch (_weakfoot)
+                    {
+                        case Globals.weakfoot.Two_Star:
+                        case Globals.weakfoot.Three_Star:
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Outside_Foot_Shot, 40)
+                            };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                            break;
+                        case Globals.weakfoot.Four_Star:
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Outside_Foot_Shot, 35)
+                            };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                            break;
+                        case Globals.weakfoot.Five_Star:
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Outside_Foot_Shot, 30)
+                            };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                            break;
+                    }
+                }
+
+                //finesse shot
+                if (traits.Contains(Globals.traits.Takes_Finesse_Freekicks)) {
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Finesse_Shot, 30)
+                            };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                }
+                if (!traits.Contains(Globals.traits.Finesse_Shot) && _curve >= 60)
+                {
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Finesse_Shot, 30)
+                            };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
                     }
                 }
 
