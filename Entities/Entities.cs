@@ -26,17 +26,329 @@ namespace Fifa_StatRandomizer.Entities
         public List<Globals.traits> traits = new List<Globals.traits>();
 
 
-        public Attributes(int _potential, Globals.height _height , Globals.weight _weight , Globals.position _position , Globals.skillmoves _skillmoves , Globals.weakfoot _weakfoot)
+        public Attributes(int _potential, Globals.height _height, Globals.weight _weight, Globals.position _position, Globals.skillmoves _skillmoves, Globals.weakfoot _weakfoot)
         {
+            ///////////////////
+            switch (_position)
+            {
+                case Globals.position.GoalKeeper:
+                    aggression = _potential - Globals.Random.Next(0, 40);
+                    att_positioning = Globals.Random.Next(20, 30);
+                    balance = _potential - Globals.Random.Next(20, 40);
+                    composure = _potential - Globals.Random.Next(20, 40);
+                    jumping = _potential - Globals.Random.Next(10, 30);
+                    penalties = Globals.Random.Next(20, 80);
+                    stamina = Globals.Random.Next(40, 60);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.Medium;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    if ((int)weakfoot < 4)
+                    {
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 20)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                            }
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Comes_For_Crosses, 30),
+                            new ProbabilityObj(Globals.traits.Cautions_With_Crosses, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Saves_With_Feet, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.GK_Long_Throw, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Puncher, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Rushes_Out_Of_Goal, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                            traits.Add(Globals.traits.GK_1on1);
+                        }
+                    }
+                    break;
+
+                case Globals.position.FullBack:
+                    aggression = _potential - Globals.Random.Next(0, 20);
+                    att_positioning = _potential - Globals.Random.Next(0, 40);
+                    penalties = Globals.Random.Next(40, 80);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.Medium;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+
+                case Globals.position.CenterBack:
+                    aggression = _potential - Globals.Random.Next(0, 10);
+                    att_positioning = _potential - Globals.Random.Next(10, 50);
+                    penalties = Globals.Random.Next(40, 80);
+                    stamina = _potential - Globals.Random.Next(0, 30);
+                    att_workrate = Globals.workrate.Low;
+                    def_workrate = Globals.workrate.High;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+
+                case Globals.position.DefensiveMid:
+                    aggression = _potential - Globals.Random.Next(0, 10);
+                    att_positioning = _potential - Globals.Random.Next(0, 40);
+                    penalties = Globals.Random.Next(50, 80);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.High;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30),
+                            new ProbabilityObj(Globals.workrate.Low, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+
+                case Globals.position.CenterMid:
+                    aggression = _potential - Globals.Random.Next(0, 20);
+                    att_positioning = _potential - Globals.Random.Next(0, 30);
+                    penalties = Globals.Random.Next(50, 80);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.Medium;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+
+                case Globals.position.AttackingMid:
+                    aggression = _potential - Globals.Random.Next(0, 40);
+                    att_positioning = _potential - Globals.Random.Next(0, 10);
+                    penalties = _potential - Globals.Random.Next(0, 15);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.Medium;
+                    def_workrate = Globals.workrate.Medium;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30),
+                            new ProbabilityObj(Globals.workrate.Low, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    if ((int)skillmoves < 3)
+                    {
+                        skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
+                    }
+                    if ((int)weakfoot < 2)
+                    {
+                        weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                    }
+                    break;
+
+                case Globals.position.Winger:
+                    aggression = _potential - Globals.Random.Next(0, 40);
+                    att_positioning = _potential - Globals.Random.Next(0, 10);
+                    penalties = _potential - Globals.Random.Next(0, 15);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.High;
+                    def_workrate = Globals.workrate.Medium;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.High, 30),
+                            new ProbabilityObj(Globals.workrate.Low, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+
+                case Globals.position.Striker:
+                    aggression = _potential - Globals.Random.Next(0, 40);
+                    att_positioning = _potential - Globals.Random.Next(0, 10);
+                    penalties = _potential - Globals.Random.Next(0, 15);
+                    stamina = _potential - Globals.Random.Next(0, 15);
+                    att_workrate = Globals.workrate.High;
+                    def_workrate = Globals.workrate.Low;
+                    skillmoves = _skillmoves;
+                    weakfoot = _weakfoot;
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            def_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            att_workrate = (Globals.workrate)result;
+                        }
+                    }
+                    break;
+            }
             if (_position != Globals.position.GoalKeeper)
             {
                 switch (_height)
                 {
                     case Globals.height.Short:
                         balance = _potential - Globals.Random.Next(0, 10);
-                        jumping = _potential - Globals.Random.Next(10, 40); 
+                        jumping = _potential - Globals.Random.Next(10, 40);
                         {
-                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 10) };
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                                new ProbabilityObj(Globals.traits.Power_Header, 10)
+                            };
                             object result = Globals.testChances(list);
                             if (result != null)
                             {
@@ -48,7 +360,9 @@ namespace Fifa_StatRandomizer.Entities
                         balance = _potential - Globals.Random.Next(0, 20);
                         jumping = _potential - Globals.Random.Next(0, 20);
                         {
-                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 20) };
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                                new ProbabilityObj(Globals.traits.Power_Header, 20)
+                            };
                             object result = Globals.testChances(list);
                             if (result != null)
                             {
@@ -60,7 +374,9 @@ namespace Fifa_StatRandomizer.Entities
                         balance = _potential - Globals.Random.Next(10, 30);
                         jumping = _potential - Globals.Random.Next(0, 10);
                         {
-                            List<ProbabilityObj> list = new List<ProbabilityObj>() { new ProbabilityObj(Globals.traits.Power_Header, 30) };
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                                new ProbabilityObj(Globals.traits.Power_Header, 30)
+                            };
                             object result = Globals.testChances(list);
                             if (result != null)
                             {
@@ -70,301 +386,337 @@ namespace Fifa_StatRandomizer.Entities
                         break;
 
                 }
-            }
-            switch (_position)
-            {
-                case Globals.position.GoalKeeper:
-                    aggression = _potential - Globals.Random.Next(0, 40);
-                    att_positioning = Globals.Random.Next(20, 30);
-                    penalties = Globals.Random.Next(20, 80);
-                    stamina = Globals.Random.Next(40, 60);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    if (Globals.Random.Next(0, 99) < 30)
-                    {
-                         traits.Add(Globals.traits.Cautions_With_Crosses);
-                    }
-                    if (Globals.Random.Next(0, 99) < 30 && !traits.Contains(Globals.traits.Cautions_With_Crosses))
-                    {
-                        traits.Add(Globals.traits.Comes_For_Crosses);
-                    }
-                    if (Globals.Random.Next(0, 99) < 30)
-                    {
-                        traits.Add(Globals.traits.Saves_With_Feet);
-                    }
-                    if (Globals.Random.Next(0, 99) < 30)
-                    {
-                        traits.Add(Globals.traits.GK_Long_Throw);
-                    }
-                    if (Globals.Random.Next(0, 99) < 30)
-                    {
-                        traits.Add(Globals.traits.Puncher);
-                    }
-                    if (Globals.Random.Next(0, 99) < 30)
-                    {
-                        traits.Add(Globals.traits.Rushes_Out_Of_Goal);
-                    }
-                    break;
-                case Globals.position.FullBack:
-                    aggression = _potential - Globals.Random.Next(0, 20);
-                    att_positioning = _potential - Globals.Random.Next(0, 40);
-                    penalties = Globals.Random.Next(40, 80);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.High;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.High;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.position.CenterBack:
-                    aggression = _potential - Globals.Random.Next(0, 10);
-                    att_positioning = _potential - Globals.Random.Next(10, 50);
-                    penalties = Globals.Random.Next(40, 80);
-                    stamina = _potential - Globals.Random.Next(0, 30);
-                    att_workrate = Globals.workrate.Low;
-                    def_workrate = Globals.workrate.High;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.position.DefensiveMid:
-                    aggression = _potential - Globals.Random.Next(0, 10);
-                    att_positioning = _potential - Globals.Random.Next(0, 40);
-                    penalties = Globals.Random.Next(50, 80);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.High;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 2))
-                    {
-                        case 0:
-                            att_workrate = Globals.workrate.High;
-                            break;
-                        case 1:
-                            att_workrate = Globals.workrate.Low;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.position.CenterMid:
-                    aggression = _potential - Globals.Random.Next(0, 20);
-                    att_positioning = _potential - Globals.Random.Next(0, 30);
-                    penalties = Globals.Random.Next(50, 80);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.High;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.High;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case Globals.position.AttackingMid:
-                    aggression = _potential - Globals.Random.Next(0, 40);
-                    att_positioning = _potential - Globals.Random.Next(0, 10);
-                    penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 2))
-                    {
-                        case 0:
-                            def_workrate = Globals.workrate.High;
-                            break;
-                        case 1:
-                            def_workrate = Globals.workrate.Low;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.High;
-                            break;
-                        default:
-                            break;
-                    }
-                    if ((int)skillmoves < 3)
-                    {
-                        skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
-                    }
-                    if ((int)weakfoot < 2)
-                    {
-                        weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
-                    }
-                    break;
-                case Globals.position.Winger:
-                    aggression = _potential - Globals.Random.Next(0, 40);
-                    att_positioning = _potential - Globals.Random.Next(0, 10);
-                    penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.High;
-                    def_workrate = Globals.workrate.Medium;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 2))
-                    {
-                        case 0:
-                            def_workrate = Globals.workrate.High;
-                            break;
-                        case 1:
-                            def_workrate = Globals.workrate.Low;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    if ((int)skillmoves < 3)
-                    {
-                        skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
-                    }
-                    if ((int)weakfoot < 2)
-                    {
-                        weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
-                    }
-                    break;
-                case Globals.position.Striker:
-                    aggression = _potential - Globals.Random.Next(0, 40);
-                    att_positioning = _potential - Globals.Random.Next(0, 10);
-                    penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.High;
-                    def_workrate = Globals.workrate.Low;
-                    skillmoves = _skillmoves;
-                    weakfoot = _weakfoot;
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            def_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    switch (Globals.Random.Next(0, 99))
-                    {
-                        case int n when n < 30:
-                            att_workrate = Globals.workrate.Medium;
-                            break;
-                        default:
-                            break;
-                    }
-                    if ((int)skillmoves < 3)
-                    {
-                        skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
-                    }
-                    if ((int)weakfoot < 2)
-                    {
-                        weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
-                    }
-                    break;
-            }
-            switch (_weight)
-            {
-                case Globals.weight.Lean:
-                    balance = balance - Globals.Random.Next(0, 5);
-                    jumping = jumping - Globals.Random.Next(-5, 0);
-                    break;
-                case Globals.weight.Average:
-                    balance = balance - Globals.Random.Next(-2, 2);
-                    jumping = jumping - Globals.Random.Next(-2, 2);
-                    break;
-                case Globals.weight.Stocky:
-                    balance = balance - Globals.Random.Next(-5, 0);
-                    jumping = jumping - Globals.Random.Next(0, 5);
-                    aggression = aggression - Globals.Random.Next(-5, 0);
-                    break;
-            }
-
-            if ((int)skillmoves < 4)
-            {
-                switch (Globals.Random.Next(0, 99))
+                switch (_weight)
                 {
-                    case int n when n < 20:
-                        skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
+                    case Globals.weight.Lean:
+                        balance = balance - Globals.Random.Next(0, 5);
+                        jumping = jumping - Globals.Random.Next(-5, 0);
+                        break;
+                    case Globals.weight.Average:
+                        balance = balance - Globals.Random.Next(-2, 2);
+                        jumping = jumping - Globals.Random.Next(-2, 2);
+                        break;
+                    case Globals.weight.Stocky:
+                        balance = balance - Globals.Random.Next(-5, 0);
+                        jumping = jumping - Globals.Random.Next(0, 5);
+                        aggression = aggression - Globals.Random.Next(-5, 0);
+                        break;
+                }
+
+                //Skill moves and positioning
+                switch (_position)
+                {
+                    case Globals.position.FullBack:
+                        if (att_positioning >= 75)
+                        {
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 25),
+                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 10)
+                        };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                        }
+                        break;
+                    case Globals.position.DefensiveMid:
+                        if (att_positioning >= 75)
+                        {
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 20),
+                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 20)
+                        };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                        }
+                        break;
+                    case Globals.position.CenterMid:
+                        if (att_positioning >= 75)
+                        {
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 20),
+                            new ProbabilityObj(Globals.traits.Backs_Into_Player, 20)
+                        };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add((Globals.traits)result);
+                                }
+                            }
+                        }
+                        break;
+                    case Globals.position.AttackingMid:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 25),
+                        new ProbabilityObj(Globals.traits.Backs_Into_Player, 25)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.position.Winger:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 40),
+                        new ProbabilityObj(Globals.traits.Backs_Into_Player, 20),
+                        new ProbabilityObj(Globals.traits.Target_Forward, 15)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        if ((int)skillmoves < 3)
+                        {
+                            skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
+                        }
+                        if ((int)weakfoot < 2)
+                        {
+                            weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                        }
+                        break;
+                    case Globals.position.Striker:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                        new ProbabilityObj(Globals.traits.Tries_To_Beat_Def_Line, 25),
+                        new ProbabilityObj(Globals.traits.Backs_Into_Player, 25),
+                        new ProbabilityObj(Globals.traits.Target_Forward, 25)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        if ((int)skillmoves < 3)
+                        {
+                            skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
+                        }
+                        if ((int)weakfoot < 2)
+                        {
+                            weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                        }
                         break;
                     default:
                         break;
-                }
-            }
 
-            if ((int)weakfoot < 4)
-            {
-                switch (Globals.Random.Next(0, 99))
+                }
+
+                if ((int)skillmoves < 4)
                 {
-                    case int n when n < 20:
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 20)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            skillmoves = (Globals.skillmoves)((int)skillmoves + 1);
+                        }
+                    }
+                }
+
+                if ((int)weakfoot < 4)
+                {
+                    if ((int)weakfoot < 1) {
                         weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                    }
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 20)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            weakfoot = (Globals.weakfoot)((int)weakfoot + 1);
+                        }
+                    }
+                }
+                if ((int)skillmoves > 2)
+                {
+                    {
+                        List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Technical_Dribbler, 40)
+                        };
+                        object result = Globals.testChances(list);
+                        if (result != null)
+                        {
+                            traits.Add((Globals.traits)result);
+                        }
+                    }
+                    switch (skillmoves)
+                    {
+                        case Globals.skillmoves.Five_Star:
+                            traits.Add(Globals.traits.Flair);
+                            break;
+                        case Globals.skillmoves.Four_Star:
+                            {
+                                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 40)
+                        };
+                                object result = Globals.testChances(list);
+                                if (result != null)
+                                {
+                                    traits.Add(Globals.traits.Flair);
+                                }
+                            }
+                            break;
+                    }
+                }
+
+                //Injury
+                {
+                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Injury_Prone, 20),
+                            new ProbabilityObj(Globals.traits.Solid_Player, 20)
+                        };
+                    object result = Globals.testChances(list);
+                    if (result != null)
+                    {
+                        traits.Add((Globals.traits)result);
+                    }
+                }
+
+                //Diver
+                {
+                    List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Diver, 10)
+                        };
+                    object result = Globals.testChances(list);
+                    if (result != null)
+                    {
+                        traits.Add((Globals.traits)result);
+                    }
+                }
+
+                // Early Crosser
+                switch (_position)
+                {
+                    case Globals.position.FullBack:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Early_Crosser, 30)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
                         break;
-                    default:
+                    case Globals.position.Winger:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Early_Crosser, 20)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.position.DefensiveMid:
+                    case Globals.position.CenterMid:
+                    case Globals.position.AttackingMid:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Early_Crosser, 10)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
                         break;
                 }
+
+                // Throw-In
+                switch (_position)
+                {
+                    case Globals.position.FullBack:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Long_Throw_In, 20),
+                            new ProbabilityObj(Globals.traits.Giant_Throw_In, 10)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.position.Winger:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Long_Throw_In, 10),
+                            new ProbabilityObj(Globals.traits.Giant_Throw_In, 5)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+                    case Globals.position.DefensiveMid:
+                    case Globals.position.CenterMid:
+                    case Globals.position.AttackingMid:
+                        {
+                            List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Long_Throw_In, 5)
+                        };
+                            object result = Globals.testChances(list);
+                            if (result != null)
+                            {
+                                traits.Add((Globals.traits)result);
+                            }
+                        }
+                        break;
+
+                }
+                composure = _potential - Globals.Random.Next(0, 10);
             }
 
-            composure = _potential - Globals.Random.Next(0, 10);
+            //////////////////////
+
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Leadership, 5),
+                            new ProbabilityObj(Globals.traits.Team_Player, 5)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    traits.Add((Globals.traits)result);
+                }
+            }
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(Globals.traits.Blames_Teammates, 10)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    traits.Add((Globals.traits)result);
+                }
+            }
             reactions = _potential - Globals.Random.Next(0, 10);
         }
 

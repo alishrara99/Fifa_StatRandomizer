@@ -212,7 +212,7 @@ namespace Fifa_StatRandomizer
             0,
             0});
             this.potential_numericUpDown.Minimum = new decimal(new int[] {
-            1,
+            60,
             0,
             0,
             0});

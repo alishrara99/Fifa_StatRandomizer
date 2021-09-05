@@ -56,6 +56,7 @@ namespace Fifa_StatRandomizer.Utilities
             Rushes_Out_Of_Goal,
             [Description("GK 1 on 1")]
             GK_1on1,
+            //////
             [Description("Early Crosser")]
             Early_Crosser,
             [Description("Long Throw-In")]
@@ -68,6 +69,8 @@ namespace Fifa_StatRandomizer.Utilities
             Solid_Player,
             [Description("Leadership")]
             Leadership,
+            [Description("Team Player")]
+            Team_Player,
             [Description("Finesse Shot")]
             Finesse_Shot,
             [Description("Outside Foot Shot")]
@@ -81,7 +84,21 @@ namespace Fifa_StatRandomizer.Utilities
             [Description("Flair")]
             Flair,
             [Description("Power Header")]
-            Power_Header
+            Power_Header,
+            [Description("Backs Into Player")]
+            Backs_Into_Player,
+            [Description("Tries To Beat Def Line")]
+            Tries_To_Beat_Def_Line,
+            [Description("Target Forward")]
+            Target_Forward,
+            [Description("Set Play Specialist")]
+            Set_Play_Specialist,
+            [Description("Diver")]
+            Diver,
+            [Description("Technical Dribbler")]
+            Technical_Dribbler,
+            [Description("Blames Teammates")]
+            Blames_Teammates
         }
         public enum workrate
         {
@@ -156,7 +173,7 @@ namespace Fifa_StatRandomizer.Utilities
             Striker = 7
         }
         public static Random Random = new Random();
-        public static int NUMERICUPDOWN_DEFAULT_VALUE = 1;
+        public static int NUMERICUPDOWN_DEFAULT_VALUE = 60;
         public static string COMBOBOX_DEFAULT_TEXT = "--Select--";
         public static int TALENTED_MIN = -5;
         public static int PRIMARY_MIN = 0;
