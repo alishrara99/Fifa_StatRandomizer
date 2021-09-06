@@ -292,9 +292,9 @@ namespace Fifa_StatRandomizer
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 268);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Position";
+            this.label4.Text = "Position*";
             // 
             // position_dropDown
             // 
@@ -748,6 +748,7 @@ namespace Fifa_StatRandomizer
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 21;
+            this.textBox2.Text = "Soon..";
             // 
             // label23
             // 
@@ -765,6 +766,7 @@ namespace Fifa_StatRandomizer
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(121, 20);
             this.textBox6.TabIndex = 19;
+            this.textBox6.Text = "Soon..";
             // 
             // label28
             // 
@@ -817,6 +819,7 @@ namespace Fifa_StatRandomizer
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 10;
+            this.textBox4.Text = "Soon..";
             // 
             // label26
             // 
@@ -834,6 +837,7 @@ namespace Fifa_StatRandomizer
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(121, 20);
             this.textBox5.TabIndex = 8;
+            this.textBox5.Text = "Soon..";
             // 
             // label27
             // 

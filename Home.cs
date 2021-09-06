@@ -83,7 +83,7 @@ namespace Fifa_StatRandomizer
         {
             if (position_dropDown.SelectedItem == null)
             {
-                Console.WriteLine("Error");
+                MessageBox.Show(text: "Empty required fields!", caption: "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -122,7 +122,7 @@ namespace Fifa_StatRandomizer
         }
         private void generateStats() {
             if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null || skillmoves__drpdwn.SelectedItem == null || weakfoot_drpdwn.SelectedItem == null) {
-                Console.WriteLine("Error");
+                
                 return;
             }
             Attributes attributes= new Attributes((int)potential_numericUpDown.Value, (int)fkacc_numupdwn.Value, (int)curve_numupdwn.Value, (int)shotpower_numupdwn.Value, (Globals.height)height_dropDown.SelectedIndex, (Globals.weight)weight_dropDown.SelectedIndex,(Globals.position)position_dropDown.SelectedIndex,(Globals.skillmoves)skillmoves__drpdwn.SelectedIndex, (Globals.weakfoot)weakfoot_drpdwn.SelectedIndex);
