@@ -77,6 +77,7 @@ namespace Fifa_StatRandomizer
             tattooRN_txtbx.Text = null;
             tattooLN_txtbx.Text = null;
             tattooBN_txtbx.Text = null;
+            boots_txtbx.Text = null;
         }
         private void generateMisc()
         {
@@ -116,6 +117,8 @@ namespace Fifa_StatRandomizer
             {
                 tattooBN_txtbx.Text = Convert.ToString(_misc.tattoo_backNeck);
             }
+
+            boots_txtbx.Text = Convert.ToString(_misc.boots);
         }
         private void generateStats() {
             if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null || skillmoves__drpdwn.SelectedItem == null || weakfoot_drpdwn.SelectedItem == null) {

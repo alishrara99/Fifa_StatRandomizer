@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fifa_StatRandomizer.exe" size="45008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fifa_StatRandomizer.exe" size="46032">
       <assemblyIdentity name="Fifa_StatRandomizer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IrSvDN2GgUw84WUfHN0qYhRP2EuAFobvE4c0gVi9yjM=</dsig:DigestValue>
+        <dsig:DigestValue>c/9jJPAxtIjdA4U7VDi9NildEMuVZQyEjoVj5EQtxss=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

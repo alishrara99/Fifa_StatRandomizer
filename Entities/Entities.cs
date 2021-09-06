@@ -70,6 +70,61 @@ namespace Fifa_StatRandomizer.Entities
                     tattoo_backNeck = Globals.Random.Next(1, 11);
                 }
             }
+
+            List<int> temp = new List<int>();
+            //189-190-191
+            List<int> nike_tiempo = new List<int>() { 
+                46,56,57,61,180,181,189,265
+            };
+            List<int> nike_magista = new List<int>() {
+                47,50,51,60,264
+            };
+            //188
+            List<int> nike_vapor = new List<int>() {
+                62,64,182,183,184,185,188,267
+            }; List<int> nike_phantom = new List<int>() {
+                177,178,179,186,187
+            };
+            List<int> nike_hypervenom = new List<int>()
+            {
+                48,52,53,59,170,171,172,173,263,343
+            };
+
+            //58 removed
+            List<int> nike_mercurial = new List<int>()
+            {
+                45,49,54,55,63,80,81,82,174,175,176,266,267
+            };
+
+            switch (_position) {
+                case Globals.position.GoalKeeper:
+                case Globals.position.CenterBack:
+                    temp.AddRange(nike_tiempo);
+                    temp.AddRange(nike_vapor);
+                    boots = temp[Globals.Random.Next(0, temp.Count - 1)];
+                    break;
+                case Globals.position.FullBack:
+                    temp.AddRange(nike_phantom);
+                    temp.AddRange(nike_mercurial);
+                    boots = temp[Globals.Random.Next(0, temp.Count - 1)];
+                    break;
+                case Globals.position.DefensiveMid:
+                case Globals.position.CenterMid:
+                    temp.AddRange(nike_magista);
+                    temp.AddRange(nike_hypervenom);
+                    boots = temp[Globals.Random.Next(0, temp.Count - 1)];
+                    break;
+                case Globals.position.AttackingMid:
+                case Globals.position.Winger:
+                case Globals.position.Striker:
+                    temp.AddRange(nike_hypervenom);
+                    temp.AddRange(nike_mercurial);
+                    temp.AddRange(nike_phantom);
+                    boots = temp[Globals.Random.Next(0, temp.Count - 1)];
+                    break;
+            }
+
+
         }
 
     }
@@ -96,9 +151,9 @@ namespace Fifa_StatRandomizer.Entities
             switch (_position)
             {
                 case Globals.position.GoalKeeper:
-                    aggression = _potential - Globals.Random.Next(0, 40);
+                    aggression = Globals.Random.Next(40, 70);
                     att_positioning = Globals.Random.Next(20, 30);
-                    balance = _potential - Globals.Random.Next(20, 40);
+                    balance = _potential - Globals.Random.Next(20, 50);
                     composure = _potential - Globals.Random.Next(20, 40);
                     jumping = _potential - Globals.Random.Next(10, 30);
                     penalties = Globals.Random.Next(20, 80);
@@ -176,7 +231,7 @@ namespace Fifa_StatRandomizer.Entities
 
                 case Globals.position.FullBack:
                     aggression = _potential - Globals.Random.Next(0, 20);
-                    att_positioning = _potential - Globals.Random.Next(0, 40);
+                    att_positioning = _potential - Globals.Random.Next(10, 50);
                     penalties = Globals.Random.Next(40, 80);
                     stamina = _potential - Globals.Random.Next(0, 15);
                     att_workrate = Globals.workrate.Medium;
@@ -207,8 +262,8 @@ namespace Fifa_StatRandomizer.Entities
 
                 case Globals.position.CenterBack:
                     aggression = _potential - Globals.Random.Next(0, 10);
-                    att_positioning = _potential - Globals.Random.Next(10, 50);
-                    penalties = Globals.Random.Next(40, 80);
+                    att_positioning = _potential - Globals.Random.Next(20, 60);
+                    penalties = Globals.Random.Next(30, 80);
                     stamina = _potential - Globals.Random.Next(0, 30);
                     att_workrate = Globals.workrate.Low;
                     def_workrate = Globals.workrate.High;
@@ -237,9 +292,9 @@ namespace Fifa_StatRandomizer.Entities
                     break;
 
                 case Globals.position.DefensiveMid:
-                    aggression = _potential - Globals.Random.Next(0, 10);
-                    att_positioning = _potential - Globals.Random.Next(0, 40);
-                    penalties = Globals.Random.Next(50, 80);
+                    aggression = _potential - Globals.Random.Next(0, 15);
+                    att_positioning = _potential - Globals.Random.Next(10, 40);
+                    penalties = Globals.Random.Next(40, 80);
                     stamina = _potential - Globals.Random.Next(0, 15);
                     att_workrate = Globals.workrate.Medium;
                     def_workrate = Globals.workrate.High;
@@ -269,17 +324,17 @@ namespace Fifa_StatRandomizer.Entities
                     break;
 
                 case Globals.position.CenterMid:
-                    aggression = _potential - Globals.Random.Next(0, 20);
+                    aggression = _potential - Globals.Random.Next(10, 30);
                     att_positioning = _potential - Globals.Random.Next(0, 30);
                     penalties = Globals.Random.Next(50, 80);
                     stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
-                    def_workrate = Globals.workrate.Medium;
+                    att_workrate = Globals.workrate.High;
+                    def_workrate = Globals.workrate.High;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
                     {
                         List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                            new ProbabilityObj(Globals.workrate.High, 30)
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
                         };
                         object result = Globals.testChances(list);
                         if (result != null)
@@ -289,7 +344,7 @@ namespace Fifa_StatRandomizer.Entities
                     }
                     {
                         List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                            new ProbabilityObj(Globals.workrate.High, 30)
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
                         };
                         object result = Globals.testChances(list);
                         if (result != null)
@@ -300,11 +355,11 @@ namespace Fifa_StatRandomizer.Entities
                     break;
 
                 case Globals.position.AttackingMid:
-                    aggression = _potential - Globals.Random.Next(0, 40);
+                    aggression = _potential - Globals.Random.Next(10, 40);
                     att_positioning = _potential - Globals.Random.Next(0, 10);
                     penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
-                    att_workrate = Globals.workrate.Medium;
+                    stamina = _potential - Globals.Random.Next(0, 20);
+                    att_workrate = Globals.workrate.High;
                     def_workrate = Globals.workrate.Medium;
                     skillmoves = _skillmoves;
                     weakfoot = _weakfoot;
@@ -321,7 +376,7 @@ namespace Fifa_StatRandomizer.Entities
                     }
                     {
                         List<ProbabilityObj> list = new List<ProbabilityObj>() {
-                            new ProbabilityObj(Globals.workrate.High, 30)
+                            new ProbabilityObj(Globals.workrate.Medium, 30)
                         };
                         object result = Globals.testChances(list);
                         if (result != null)
@@ -340,10 +395,10 @@ namespace Fifa_StatRandomizer.Entities
                     break;
 
                 case Globals.position.Winger:
-                    aggression = _potential - Globals.Random.Next(0, 40);
+                    aggression = _potential - Globals.Random.Next(10, 40);
                     att_positioning = _potential - Globals.Random.Next(0, 10);
                     penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
+                    stamina = _potential - Globals.Random.Next(0, 20);
                     att_workrate = Globals.workrate.High;
                     def_workrate = Globals.workrate.Medium;
                     skillmoves = _skillmoves;
@@ -375,7 +430,7 @@ namespace Fifa_StatRandomizer.Entities
                     aggression = _potential - Globals.Random.Next(0, 40);
                     att_positioning = _potential - Globals.Random.Next(0, 10);
                     penalties = _potential - Globals.Random.Next(0, 15);
-                    stamina = _potential - Globals.Random.Next(0, 15);
+                    stamina = _potential - Globals.Random.Next(0, 20);
                     att_workrate = Globals.workrate.High;
                     def_workrate = Globals.workrate.Low;
                     skillmoves = _skillmoves;
@@ -455,10 +510,12 @@ namespace Fifa_StatRandomizer.Entities
                     case Globals.weight.Lean:
                         balance = balance - Globals.Random.Next(0, 5);
                         jumping = jumping - Globals.Random.Next(-5, 0);
+                        aggression = aggression - Globals.Random.Next(0, 5);
                         break;
                     case Globals.weight.Average:
                         balance = balance - Globals.Random.Next(-2, 2);
                         jumping = jumping - Globals.Random.Next(-2, 2);
+                        aggression = aggression - Globals.Random.Next(-2, 2);
                         break;
                     case Globals.weight.Stocky:
                         balance = balance - Globals.Random.Next(-5, 0);
