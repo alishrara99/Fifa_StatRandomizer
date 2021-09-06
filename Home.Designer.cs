@@ -30,6 +30,12 @@ namespace Fifa_StatRandomizer
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.shotpower_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.curve_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.fkacc_numupdwn = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.weakfoot_drpdwn = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -72,40 +78,34 @@ namespace Fifa_StatRandomizer
             this.label21 = new System.Windows.Forms.Label();
             this.attWorkRate_txtbx = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.fkacc_numupdwn = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.curve_numupdwn = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.shotpower_numupdwn = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tattooBN_txtbx = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.tattooLN_txtbx = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tattooRN_txtbx = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tattooLA_txtbx = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tattooRA_txtbx = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.boots_txtbx = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,6 +137,99 @@ namespace Fifa_StatRandomizer
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Data";
+            // 
+            // shotpower_numupdwn
+            // 
+            this.shotpower_numupdwn.Location = new System.Drawing.Point(10, 162);
+            this.shotpower_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.shotpower_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shotpower_numupdwn.Name = "shotpower_numupdwn";
+            this.shotpower_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.shotpower_numupdwn.TabIndex = 19;
+            this.shotpower_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 145);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Shot Power";
+            // 
+            // curve_numupdwn
+            // 
+            this.curve_numupdwn.Location = new System.Drawing.Point(10, 122);
+            this.curve_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.curve_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.curve_numupdwn.Name = "curve_numupdwn";
+            this.curve_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.curve_numupdwn.TabIndex = 17;
+            this.curve_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 105);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(36, 13);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Curve";
+            // 
+            // fkacc_numupdwn
+            // 
+            this.fkacc_numupdwn.Location = new System.Drawing.Point(9, 82);
+            this.fkacc_numupdwn.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.fkacc_numupdwn.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.fkacc_numupdwn.Name = "fkacc_numupdwn";
+            this.fkacc_numupdwn.Size = new System.Drawing.Size(120, 20);
+            this.fkacc_numupdwn.TabIndex = 15;
+            this.fkacc_numupdwn.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Fk. Accuracy";
             // 
             // label14
             // 
@@ -173,7 +266,6 @@ namespace Fifa_StatRandomizer
             this.skillmoves__drpdwn.Size = new System.Drawing.Size(121, 21);
             this.skillmoves__drpdwn.TabIndex = 10;
             this.skillmoves__drpdwn.Text = "--Select--";
-            this.skillmoves__drpdwn.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // reset_Btn
             // 
@@ -548,116 +640,23 @@ namespace Fifa_StatRandomizer
             this.label22.TabIndex = 1;
             this.label22.Text = "Offensive Workrate";
             // 
-            // fkacc_numupdwn
-            // 
-            this.fkacc_numupdwn.Location = new System.Drawing.Point(9, 82);
-            this.fkacc_numupdwn.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.fkacc_numupdwn.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.fkacc_numupdwn.Name = "fkacc_numupdwn";
-            this.fkacc_numupdwn.Size = new System.Drawing.Size(120, 20);
-            this.fkacc_numupdwn.TabIndex = 15;
-            this.fkacc_numupdwn.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 65);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 13);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "Fk. Accuracy";
-            // 
-            // curve_numupdwn
-            // 
-            this.curve_numupdwn.Location = new System.Drawing.Point(10, 122);
-            this.curve_numupdwn.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.curve_numupdwn.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.curve_numupdwn.Name = "curve_numupdwn";
-            this.curve_numupdwn.Size = new System.Drawing.Size(120, 20);
-            this.curve_numupdwn.TabIndex = 17;
-            this.curve_numupdwn.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 105);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(36, 13);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "Curve";
-            // 
-            // shotpower_numupdwn
-            // 
-            this.shotpower_numupdwn.Location = new System.Drawing.Point(10, 162);
-            this.shotpower_numupdwn.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.shotpower_numupdwn.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.shotpower_numupdwn.Name = "shotpower_numupdwn";
-            this.shotpower_numupdwn.Size = new System.Drawing.Size(120, 20);
-            this.shotpower_numupdwn.TabIndex = 19;
-            this.shotpower_numupdwn.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 145);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 13);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "Shot Power";
-            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.tattooBN_txtbx);
             this.groupBox4.Controls.Add(this.label32);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.tattooLN_txtbx);
             this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.tattooRN_txtbx);
             this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.tattooLA_txtbx);
             this.groupBox4.Controls.Add(this.label29);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.textBox6);
             this.groupBox4.Controls.Add(this.label28);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.tattooRA_txtbx);
             this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.boots_txtbx);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Controls.Add(this.label26);
@@ -670,6 +669,121 @@ namespace Fifa_StatRandomizer
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Misc";
             // 
+            // tattooBN_txtbx
+            // 
+            this.tattooBN_txtbx.Location = new System.Drawing.Point(9, 394);
+            this.tattooBN_txtbx.Multiline = true;
+            this.tattooBN_txtbx.Name = "tattooBN_txtbx";
+            this.tattooBN_txtbx.ReadOnly = true;
+            this.tattooBN_txtbx.Size = new System.Drawing.Size(121, 21);
+            this.tattooBN_txtbx.TabIndex = 29;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 379);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(97, 13);
+            this.label32.TabIndex = 28;
+            this.label32.Text = "Tattoo - Back Neck";
+            // 
+            // tattooLN_txtbx
+            // 
+            this.tattooLN_txtbx.Location = new System.Drawing.Point(9, 355);
+            this.tattooLN_txtbx.Multiline = true;
+            this.tattooLN_txtbx.Name = "tattooLN_txtbx";
+            this.tattooLN_txtbx.ReadOnly = true;
+            this.tattooLN_txtbx.Size = new System.Drawing.Size(121, 21);
+            this.tattooLN_txtbx.TabIndex = 27;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 340);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(94, 13);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "Tattoo - Left Neck";
+            // 
+            // tattooRN_txtbx
+            // 
+            this.tattooRN_txtbx.Location = new System.Drawing.Point(9, 316);
+            this.tattooRN_txtbx.Multiline = true;
+            this.tattooRN_txtbx.Name = "tattooRN_txtbx";
+            this.tattooRN_txtbx.ReadOnly = true;
+            this.tattooRN_txtbx.Size = new System.Drawing.Size(121, 21);
+            this.tattooRN_txtbx.TabIndex = 25;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 301);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(100, 13);
+            this.label31.TabIndex = 24;
+            this.label31.Text = "Tattoo - Right Neck";
+            // 
+            // tattooLA_txtbx
+            // 
+            this.tattooLA_txtbx.Location = new System.Drawing.Point(9, 277);
+            this.tattooLA_txtbx.Multiline = true;
+            this.tattooLA_txtbx.Name = "tattooLA_txtbx";
+            this.tattooLA_txtbx.ReadOnly = true;
+            this.tattooLA_txtbx.Size = new System.Drawing.Size(121, 21);
+            this.tattooLA_txtbx.TabIndex = 23;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 262);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 13);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Tattoo - Left Arm";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(9, 80);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.TabIndex = 21;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(99, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Sprinting Animation";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(9, 40);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(121, 20);
+            this.textBox6.TabIndex = 19;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 24);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(96, 13);
+            this.label28.TabIndex = 18;
+            this.label28.Text = "Running Animation";
+            // 
+            // tattooRA_txtbx
+            // 
+            this.tattooRA_txtbx.Location = new System.Drawing.Point(9, 238);
+            this.tattooRA_txtbx.Multiline = true;
+            this.tattooRA_txtbx.Name = "tattooRA_txtbx";
+            this.tattooRA_txtbx.ReadOnly = true;
+            this.tattooRA_txtbx.Size = new System.Drawing.Size(121, 21);
+            this.tattooRA_txtbx.TabIndex = 17;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -679,13 +793,13 @@ namespace Fifa_StatRandomizer
             this.label24.TabIndex = 13;
             this.label24.Text = "Tattoo - Right Arm";
             // 
-            // textBox3
+            // boots_txtbx
             // 
-            this.textBox3.Location = new System.Drawing.Point(9, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 12;
+            this.boots_txtbx.Location = new System.Drawing.Point(9, 199);
+            this.boots_txtbx.Name = "boots_txtbx";
+            this.boots_txtbx.ReadOnly = true;
+            this.boots_txtbx.Size = new System.Drawing.Size(121, 20);
+            this.boots_txtbx.TabIndex = 12;
             // 
             // label25
             // 
@@ -730,123 +844,6 @@ namespace Fifa_StatRandomizer
             this.label27.TabIndex = 1;
             this.label27.Text = "Freekick Stance";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 238);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(121, 21);
-            this.textBox1.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(9, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 64);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(99, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Sprinting Animation";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(9, 40);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 19;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 24);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(96, 13);
-            this.label28.TabIndex = 18;
-            this.label28.Text = "Running Animation";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(9, 277);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(121, 21);
-            this.textBox7.TabIndex = 23;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 262);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(90, 13);
-            this.label29.TabIndex = 22;
-            this.label29.Text = "Tattoo - Left Arm";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(9, 355);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(121, 21);
-            this.textBox8.TabIndex = 27;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 340);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(94, 13);
-            this.label30.TabIndex = 26;
-            this.label30.Text = "Tattoo - Left Neck";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(9, 316);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(121, 21);
-            this.textBox9.TabIndex = 25;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 301);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(100, 13);
-            this.label31.TabIndex = 24;
-            this.label31.Text = "Tattoo - Right Neck";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(9, 394);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(121, 21);
-            this.textBox10.TabIndex = 29;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 379);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(71, 13);
-            this.label32.TabIndex = 28;
-            this.label32.Text = "Tattoo - Back";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -861,14 +858,14 @@ namespace Fifa_StatRandomizer
             this.Load += new System.EventHandler(this.Home_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.potential_numericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fkacc_numupdwn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.curve_numupdwn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotpower_numupdwn)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -931,21 +928,21 @@ namespace Fifa_StatRandomizer
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tattooRA_txtbx;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox boots_txtbx;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tattooBN_txtbx;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tattooLN_txtbx;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tattooRN_txtbx;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tattooLA_txtbx;
         private System.Windows.Forms.Label label29;
     }
 }

@@ -6,9 +6,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Fifa_StatRandomizer.Utilities;
+using static Fifa_StatRandomizer.Utilities.Globals;
 
 namespace Fifa_StatRandomizer.Entities
 {
+    class Misc {
+        public int tattoo_rightArm { get; set; }
+        public int tattoo_leftArm { get; set; }
+        public int tattoo_rightNeck { get; set; }
+        public int tattoo_leftNeck { get; set; }
+        public int tattoo_backNeck { get; set; }
+        public int boots { get; set; }
+
+        public Misc (Globals.position _position)
+        {
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 30)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    tattoo_rightArm = Globals.Random.Next(1,22);
+                }
+            }
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 30)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    tattoo_leftArm = Globals.Random.Next(1, 23);
+                }
+            }
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 30)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    tattoo_rightNeck = Globals.Random.Next(1, 10);
+                }
+            }
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 30)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    tattoo_leftNeck = Globals.Random.Next(1, 8);
+                }
+            }
+            {
+                List<ProbabilityObj> list = new List<ProbabilityObj>() {
+                            new ProbabilityObj(true, 30)
+                        };
+                object result = Globals.testChances(list);
+                if (result != null)
+                {
+                    tattoo_backNeck = Globals.Random.Next(1, 11);
+                }
+            }
+        }
+
+    }
     class Attributes
     {
         public int composure { get; set; }

@@ -72,6 +72,50 @@ namespace Fifa_StatRandomizer
             skillmoves_txtbx.Text = null;
             weakfoot_txtbx.Text = null;
             traits_txtbx.Text = null;
+            tattooRA_txtbx.Text = null;
+            tattooLA_txtbx.Text = null;
+            tattooRN_txtbx.Text = null;
+            tattooLN_txtbx.Text = null;
+            tattooBN_txtbx.Text = null;
+        }
+        private void generateMisc()
+        {
+            if (position_dropDown.SelectedItem == null)
+            {
+                Console.WriteLine("Error");
+                return;
+            }
+
+            Misc misc = new Misc((Globals.position)position_dropDown.SelectedIndex);
+            displayMisc(misc);
+        }
+        private void displayMisc(Misc _misc)
+        {
+            tattooRA_txtbx.Text = null;
+            tattooLA_txtbx.Text = null;
+            tattooRN_txtbx.Text = null;
+            tattooLN_txtbx.Text = null;
+            tattooBN_txtbx.Text = null;
+            if (_misc.tattoo_rightArm > 0)
+            {
+                tattooRA_txtbx.Text = Convert.ToString(_misc.tattoo_rightArm);
+            }
+            if (_misc.tattoo_leftArm > 0)
+            {
+                tattooLA_txtbx.Text = Convert.ToString(_misc.tattoo_leftArm);
+            }
+            if (_misc.tattoo_rightNeck > 0)
+            {
+                tattooRN_txtbx.Text = Convert.ToString(_misc.tattoo_rightNeck);
+            }
+            if (_misc.tattoo_leftNeck > 0)
+            {
+                tattooLN_txtbx.Text = Convert.ToString(_misc.tattoo_leftNeck);
+            }
+            if (_misc.tattoo_backNeck > 0)
+            {
+                tattooBN_txtbx.Text = Convert.ToString(_misc.tattoo_backNeck);
+            }
         }
         private void generateStats() {
             if (height_dropDown.SelectedItem == null || weight_dropDown.SelectedItem == null || position_dropDown.SelectedItem == null || skillmoves__drpdwn.SelectedItem == null || weakfoot_drpdwn.SelectedItem == null) {
@@ -123,22 +167,8 @@ namespace Fifa_StatRandomizer
 
         private void generate_Btn_Click(object sender, EventArgs e)
         {
+            generateMisc();
             generateStats();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
